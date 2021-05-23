@@ -8,6 +8,7 @@ package iniciolockers;
 import SQL.Conexion;
 import SQL.Controllers;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -72,7 +73,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Contraseña");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 160, 81, 17);
+        jLabel3.setBounds(60, 160, 83, 15);
 
         txt_contra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,11 +81,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_contra);
-        txt_contra.setBounds(150, 150, 227, 34);
+        txt_contra.setBounds(150, 150, 227, 30);
 
         jLabel4.setText("Estatus");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 200, 52, 17);
+        jLabel4.setBounds(80, 200, 54, 15);
 
         txt_status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,11 +93,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_status);
-        txt_status.setBounds(150, 190, 227, 34);
+        txt_status.setBounds(150, 190, 227, 30);
 
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 250, 64, 17);
+        jLabel5.setBounds(70, 250, 62, 15);
 
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,11 +105,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_telefono);
-        txt_telefono.setBounds(150, 240, 227, 34);
+        txt_telefono.setBounds(150, 240, 227, 30);
 
         jLabel6.setText("Correo");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(90, 290, 49, 17);
+        jLabel6.setBounds(90, 290, 48, 15);
 
         txt_correo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,19 +117,19 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_correo);
-        txt_correo.setBounds(150, 290, 227, 34);
+        txt_correo.setBounds(150, 290, 227, 30);
 
         jLabel7.setText("Sexo");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 340, 34, 17);
+        jLabel7.setBounds(100, 340, 34, 15);
 
         jLabel1.setText("Clave");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 80, 38, 17);
+        jLabel1.setBounds(100, 80, 38, 15);
 
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 120, 57, 17);
+        jLabel2.setBounds(80, 120, 55, 15);
 
         txt_sexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +137,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_sexo);
-        txt_sexo.setBounds(150, 330, 227, 34);
+        txt_sexo.setBounds(150, 330, 227, 30);
 
         txt_clave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +145,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_clave);
-        txt_clave.setBounds(150, 70, 227, 34);
+        txt_clave.setBounds(150, 70, 227, 30);
 
         txt_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +153,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_nombre);
-        txt_nombre.setBounds(150, 110, 227, 34);
+        txt_nombre.setBounds(150, 110, 227, 30);
 
         btn_update.setText("Actualizar");
         btn_update.addActionListener(new java.awt.event.ActionListener() {
@@ -164,6 +165,11 @@ public class NewJFrame extends javax.swing.JFrame {
         btn_update.setBounds(480, 110, 110, 30);
 
         jButton3.setText("Buscar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(490, 70, 90, 30);
 
@@ -262,6 +268,40 @@ public class NewJFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error en la Actualizacion");
         }
     }//GEN-LAST:event_btn_updateActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        //Apartamos un contador para ver si hay resultados
+        int contador=0;
+        String clave="", nombre="", contra="", estatus="", telefono="", correo="", sexo="";
+        //A partir de aquí, después de introducir el código, checamos la existencia en la base de datos con el controller.
+        ResultSet rs1 = Controllers.mostrardatos(" Usuarios ", " clave, Nombre, Contraseña, Estatus, Telefono, Correo, Sexo ", " clave = '"+txt_Buscar.getText()+"'" );
+        try {
+            while(rs1.next()){
+                contador++;
+                clave       = rs1.getString("clave");
+                nombre      = rs1.getString("Nombre");
+                contra      = rs1.getString("Contraseña");
+                estatus     = rs1.getString("Estatus");
+                telefono    = rs1.getString("Telefono");
+                correo      = rs1.getString("Correo");
+                sexo        = rs1.getString("Sexo");
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if(contador>0){
+            txt_clave.setText(clave);
+            txt_nombre.setText(nombre);
+            txt_contra.setText(contra);
+            txt_status.setText(estatus);
+            txt_telefono.setText(telefono);
+            txt_correo.setText(correo);
+            txt_sexo.setText(sexo);
+        }else{
+            System.out.println("No hay");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
