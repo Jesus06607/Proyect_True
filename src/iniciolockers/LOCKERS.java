@@ -5,6 +5,7 @@
  */
 package iniciolockers;
 
+import Administrador.Principal;
 import SQL.Controllers;
 import javax.swing.ImageIcon;
 
@@ -32,6 +33,7 @@ public class LOCKERS extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -48,8 +50,10 @@ public class LOCKERS extends javax.swing.JFrame {
         txt_color = new javax.swing.JTextField();
         txt_estatus = new javax.swing.JTextField();
         btn_guardar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
@@ -117,15 +121,15 @@ public class LOCKERS extends javax.swing.JFrame {
                 txt_precioKeyTyped(evt);
             }
         });
-        getContentPane().add(txt_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 130, 30));
-        getContentPane().add(txt_capacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 160, 30));
+        getContentPane().add(txt_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 110, 30));
+        getContentPane().add(txt_capacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 110, 30));
 
         txt_color.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_colorKeyTyped(evt);
             }
         });
-        getContentPane().add(txt_color, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 180, 30));
+        getContentPane().add(txt_color, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 110, 30));
 
         txt_estatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,18 +149,18 @@ public class LOCKERS extends javax.swing.JFrame {
                 btn_guardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 80, 40));
+        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 80, 40));
 
-        jButton2.setText("Ir al menu");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("Ir al menu");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 100, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 90, 40));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 490));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 640, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -216,9 +220,11 @@ public class LOCKERS extends javax.swing.JFrame {
         this.txt_fadquisicion.setText("");
     }//GEN-LAST:event_btn_guardarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Principal frm= new Principal();
+        frm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,8 +263,9 @@ public class LOCKERS extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_guardar;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

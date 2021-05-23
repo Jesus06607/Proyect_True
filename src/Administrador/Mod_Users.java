@@ -3,29 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iniciolockers;
+package Administrador;
 
-import Administrador.Principal;
-import SQL.Conexion;
 import SQL.Controllers;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import tables_datas.data_table;
 
 /**
  *
- * @author under305
+ * @author martin
  */
-public class NewJFrame extends javax.swing.JFrame {
-   
+public class Mod_Users extends javax.swing.JFrame {
+
     /**
-     * Creates new form NewJFrame
+     * Creates new form Mod_Users
      */
-    public NewJFrame() {
+    public Mod_Users() {
         initComponents();
     }
 
@@ -38,7 +35,6 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txt_contra = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -53,26 +49,20 @@ public class NewJFrame extends javax.swing.JFrame {
         txt_sexo = new javax.swing.JTextField();
         txt_clave = new javax.swing.JTextField();
         txt_nombre = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         btn_update = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         txt_Buscar = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
         getContentPane().setLayout(null);
 
-        jButton1.setText("Insertar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(400, 110, 70, 30);
-
+        jLabel3.setForeground(new java.awt.Color(11, 11, 11));
         jLabel3.setText("Contraseña");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 160, 81, 17);
@@ -85,6 +75,7 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_contra);
         txt_contra.setBounds(150, 150, 227, 30);
 
+        jLabel4.setForeground(new java.awt.Color(11, 11, 11));
         jLabel4.setText("Estatus");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(80, 200, 52, 17);
@@ -97,6 +88,7 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_status);
         txt_status.setBounds(150, 190, 227, 30);
 
+        jLabel5.setForeground(new java.awt.Color(11, 11, 11));
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(70, 250, 64, 17);
@@ -109,6 +101,7 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_telefono);
         txt_telefono.setBounds(150, 240, 227, 30);
 
+        jLabel6.setForeground(new java.awt.Color(11, 11, 11));
         jLabel6.setText("Correo");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(90, 290, 49, 17);
@@ -121,14 +114,17 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_correo);
         txt_correo.setBounds(150, 290, 227, 30);
 
+        jLabel7.setForeground(new java.awt.Color(11, 11, 11));
         jLabel7.setText("Sexo");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(100, 340, 34, 17);
 
+        jLabel1.setForeground(new java.awt.Color(11, 11, 11));
         jLabel1.setText("Clave");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(100, 80, 38, 17);
 
+        jLabel2.setForeground(new java.awt.Color(11, 11, 11));
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(80, 120, 57, 17);
@@ -157,14 +153,21 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_nombre);
         txt_nombre.setBounds(150, 110, 227, 30);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Opciones"));
+
+        jButton1.setText("Insertar mas");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         btn_update.setText("Actualizar");
         btn_update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_updateActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_update);
-        btn_update.setBounds(480, 110, 110, 30);
 
         jButton3.setText("Buscar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -172,35 +175,67 @@ public class NewJFrame extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(490, 70, 90, 30);
 
         txt_Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_BuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(txt_Buscar);
-        txt_Buscar.setBounds(390, 70, 98, 30);
 
-        jLabel8.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(13, 10, 250));
-        jLabel8.setText("INSERTE LA INFORMACION REQUERIDA");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(200, 10, 300, 40);
-
-        jButton2.setText("Ir al menu");
+        jButton2.setText("Ir al Menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(400, 160, 90, 40);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 670, 390);
+        jButton4.setText("Consultar Todo");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txt_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_Buscar)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(430, 70, 270, 280);
+
+        jLabel8.setText("DATOS  DE USUARIOS");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(310, 10, 160, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -217,7 +252,7 @@ public class NewJFrame extends javax.swing.JFrame {
         cadena7 = txt_sexo.getText();
 
         if (txt_clave.getText().equals("")
-                || (txt_nombre.getText().equals("")
+            || (txt_nombre.getText().equals("")
                 || (txt_contra.getText().equals(""))
                 || (txt_status.getText().equals(""))
                 || (txt_telefono.getText().equals(""))
@@ -228,7 +263,7 @@ public class NewJFrame extends javax.swing.JFrame {
         } else if (Controllers.addData(" Usuarios ", " clave, Nombre, Contraseña, Estatus, Telefono, Correo, Sexo ", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "' ")) {
             System.out.println("Los valores han sido agregados a la base de datos ");
         }
-        //Esto sirve para que despues de ingresar los datos se pongan vacios 
+        //Esto sirve para que despues de ingresar los datos se pongan vacios
         this.txt_clave.setText("");
         this.txt_nombre.setText("");
         this.txt_contra.setText("");
@@ -236,7 +271,6 @@ public class NewJFrame extends javax.swing.JFrame {
         this.txt_status.setText("");
         this.txt_correo.setText("");
         this.txt_sexo.setText("");
-
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -268,10 +302,6 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_nombreActionPerformed
 
-    private void txt_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_BuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_BuscarActionPerformed
-
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
         if(Controllers.updateData("Usuarios", " Nombre='" +txt_nombre.getText()+ "', clave='"+txt_clave.getText()+"', Contraseña='"+txt_contra.getText()+"', Estatus='"+txt_status.getText()+"', Telefono='"+txt_telefono.getText()+"', Correo='"+txt_correo.getText()+"', Sexo='"+txt_sexo.getText()+"'", "clave='"+txt_clave.getText()+"'")){
             JOptionPane.showMessageDialog(null, "Datos Actualizados");
@@ -297,9 +327,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 correo      = rs1.getString("Correo");
                 sexo        = rs1.getString("Sexo");
             }
-            
+
         } catch (SQLException ex) {
-            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Mod_Users.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(contador>0){
             txt_clave.setText(clave);
@@ -314,16 +344,26 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void txt_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_BuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_BuscarActionPerformed
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Principal frm= new Principal();
+       Principal frm= new Principal();
+            frm.setVisible(true);
+            this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        data_table frm= new data_table();
         frm.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-       public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -337,20 +377,20 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Users.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new Mod_Users().setVisible(true);
             }
         });
     }
@@ -360,6 +400,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -368,7 +409,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_clave;
     private javax.swing.JTextField txt_contra;

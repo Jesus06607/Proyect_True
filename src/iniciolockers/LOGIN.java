@@ -5,7 +5,9 @@
  */
 package iniciolockers;
 
+import Administrador.Principal;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -42,6 +44,7 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(400, 400));
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/login.png"))); // NOI18N
@@ -53,7 +56,7 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("** INICIO DE SESION **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(154, 40, 196, 42);
+        jLabel2.setBounds(154, 40, 226, 42);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -88,19 +91,55 @@ public class LOGIN extends javax.swing.JFrame {
         jButton2.setBounds(150, 310, 85, 40);
 
         jButton1.setText("Entrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(280, 310, 90, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_login.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(-150, 0, 670, 480);
+        jLabel6.setBounds(-150, 0, 660, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       INICIOLOCKERS frm= new INICIOLOCKERS();
+            frm.setVisible(true);
+            this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        String [] Usuarios={"Admin"};
+        String [] Claves=new String[2];
+        Claves[0]="1234";
+
+        String usuario=text_usuario.getText();
+        String password=clave.getText();
+        boolean mensaje=false;
+        for(int i = 0; i< Usuarios.length; i++){
+            if(Usuarios[i].equals(usuario)&&Claves[i].equals(password)){
+                mensaje=true;
+            }
+        }
+
+        if(mensaje)
+        {
+            Principal frm= new Principal();
+            frm.setVisible(true);
+            this.dispose();
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "intente otra vez");
+            text_usuario.setText("");
+            clave.setText("");
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -3,25 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iniciolockers;
+package Administrador;
 
-import Administrador.Principal;
 import SQL.Controllers;
-import javax.swing.ImageIcon;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import tables_datas.Table_turistas;
 
 /**
  *
- * @author Araceli
+ * @author martin
  */
-public class TURISTAS extends javax.swing.JFrame {
+public class Mod_Turistas extends javax.swing.JFrame {
 
     /**
-     * Creates new form TURISTAS
+     * Creates new form Mod_Turistas
      */
-    public TURISTAS() {
+    public Mod_Turistas() {
         initComponents();
-         this.setTitle("Sistema de Lockers de Ciudad Valles");
-        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
     }
 
     /**
@@ -48,12 +50,16 @@ public class TURISTAS extends javax.swing.JFrame {
         txt_edad = new javax.swing.JTextField();
         txt_nacion = new javax.swing.JTextField();
         txt_sexo = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        txt_Buscar = new javax.swing.JTextField();
+        btn_buscar = new javax.swing.JButton();
+        btn_update = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(400, 500));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -65,49 +71,49 @@ public class TURISTAS extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(1, 1, 1));
         jLabel2.setText("CLAVE");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(110, 90, 58, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(1, 1, 1));
         jLabel3.setText("NOMBRE");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(90, 130, 80, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(1, 1, 1));
         jLabel4.setText("TELEFONO");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(80, 180, 96, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(1, 1, 1));
         jLabel5.setText("DIRECCION");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(70, 230, 104, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(1, 1, 1));
         jLabel6.setText("EDAD");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(120, 280, 51, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(1, 1, 1));
         jLabel7.setText("NACIONALIDAD");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(30, 330, 141, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(1, 1, 1));
         jLabel8.setText("SEXO");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(120, 380, 49, 30);
@@ -132,30 +138,86 @@ public class TURISTAS extends javax.swing.JFrame {
         getContentPane().add(txt_sexo);
         txt_sexo.setBounds(180, 380, 290, 30);
 
-        jButton1.setText("Guardar");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Opciones "));
+
+        btn_buscar.setText("Buscar");
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
+
+        btn_update.setText("Actualizar");
+        btn_update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_updateActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Insertar mas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(470, 430, 80, 40);
 
-        jButton2.setText("Ir al menu");
+        jButton2.setText("Ir al Menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(560, 430, 90, 40);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_turista.jpg"))); // NOI18N
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 700, 510);
+        jButton3.setText("Consultar Todo");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txt_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(490, 90, 260, 290);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txt_nacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nacionActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String cadena1, cadena2, cadena3, cadena4, cadena5, cadena6, cadena7;
@@ -169,7 +231,7 @@ public class TURISTAS extends javax.swing.JFrame {
         cadena7 = txt_sexo.getText();
 
         if (txt_clave.getText().equals("")
-                || (txt_nombre.getText().equals("")
+            || (txt_nombre.getText().equals("")
                 || (txt_telefono.getText().equals(""))
                 || (txt_direccion.getText().equals(""))
                 || (txt_edad.getText().equals(""))
@@ -180,7 +242,7 @@ public class TURISTAS extends javax.swing.JFrame {
         } else if (Controllers.addData(" Turistas ", " clave, Nombre, Telefono, Direccion, Edad, Nacionalidad, Sexo ", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "' ")) {
             javax.swing.JOptionPane.showMessageDialog(this, "Se guardo correctamente \n", "FELICIDADES!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         }
-        //Esto sirve para que despues de ingresar los datos se pongan vacios 
+        //Esto sirve para que despues de ingresar los datos se pongan vacios
         this.txt_clave.setText("");
         this.txt_nombre.setText("");
         this.txt_telefono.setText("");
@@ -190,15 +252,61 @@ public class TURISTAS extends javax.swing.JFrame {
         this.txt_sexo.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void txt_nacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nacionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nacionActionPerformed
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+       
+         //Apartamos un contador para ver si hay resultados
+        int contador=0;
+        String clave="", nombre="", telefono="", direccion="", edad="", nacion="", sexo="";
+        //A partir de aquí, después de introducir el código, checamos la existencia en la base de datos con el controller.
+        ResultSet rs1 = Controllers.mostrardatos(" Turistas ", " clave, Nombre, Telefono, Direccion, Edad, Nacionalidad, Sexo ", " clave = '"+txt_Buscar.getText()+"'" );
+        try {
+            while(rs1.next()){
+                contador++;
+                clave       = rs1.getString("clave");
+                nombre      = rs1.getString("Nombre");
+                telefono    = rs1.getString("Telefono");
+                direccion   = rs1.getString("Direccion");
+                edad        = rs1.getString("Edad");
+                nacion      = rs1.getString("Nacionalidad");
+                sexo        = rs1.getString("Sexo");
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Mod_Turistas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if(contador>0){
+            txt_clave.setText(clave);
+            txt_nombre.setText(nombre);
+            txt_telefono.setText(telefono);
+            txt_direccion.setText(direccion);
+            txt_edad.setText(edad);
+            txt_nacion.setText(nacion);
+            txt_sexo.setText(sexo);
+        }else{
+            System.out.println("No hay");
+        }
+        
+    }//GEN-LAST:event_btn_buscarActionPerformed
+
+    private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
+        if(Controllers.updateData(" Turistas ", " clave='" +txt_clave.getText()+ "', Nombre='"+txt_nombre.getText()+"', Telefono='"+txt_telefono.getText()+"', Direccion='"+txt_direccion.getText()+"', Edad='"+txt_edad.getText()+"', Nacionalidad='"+txt_nacion.getText()+"', Sexo='"+txt_sexo.getText()+"'", "clave='"+txt_clave.getText()+"'")){
+            JOptionPane.showMessageDialog(null, "Datos Actualizados");
+        }else{
+            JOptionPane.showMessageDialog(null, "Error en la Actualizacion");
+        }
+    }//GEN-LAST:event_btn_updateActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Principal frm= new Principal();
+     Principal frm= new Principal();
+            frm.setVisible(true);
+            this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Table_turistas frm= new Table_turistas();
         frm.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,27 +325,30 @@ public class TURISTAS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TURISTAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Turistas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TURISTAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Turistas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TURISTAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Turistas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TURISTAS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Turistas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TURISTAS().setVisible(true);
+                new Mod_Turistas().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_buscar;
+    private javax.swing.JButton btn_update;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -246,7 +357,8 @@ public class TURISTAS extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_clave;
     private javax.swing.JTextField txt_direccion;
     private javax.swing.JTextField txt_edad;

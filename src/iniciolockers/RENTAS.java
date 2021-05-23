@@ -128,7 +128,7 @@ public class RENTAS extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_rentas.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 490, 520);
+        jLabel9.setBounds(0, 0, 590, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

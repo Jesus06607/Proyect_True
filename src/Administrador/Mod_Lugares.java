@@ -3,25 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iniciolockers;
+package Administrador;
 
-import Administrador.Principal;
 import SQL.Controllers;
-import javax.swing.ImageIcon;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import tables_datas.Table_Lugares;
 
 /**
  *
- * @author FZVercetti
+ * @author martin
  */
-public class LUGARES extends javax.swing.JFrame {
+public class Mod_Lugares extends javax.swing.JFrame {
 
     /**
-     * Creates new form LUGARES
+     * Creates new form Mod_Lugares
      */
-    public LUGARES() {
+    public Mod_Lugares() {
         initComponents();
-        this.setTitle("Sistema de Lockers de Ciudad Valles");
-        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
     }
 
     /**
@@ -46,12 +48,15 @@ public class LUGARES extends javax.swing.JFrame {
         txt_telefono = new javax.swing.JTextField();
         txt_clave = new javax.swing.JTextField();
         txt_responsable = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        txt_Buscar = new javax.swing.JTextField();
+        btn_buscar = new javax.swing.JButton();
+        btn_update = new javax.swing.JButton();
         btn_guardar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -59,49 +64,49 @@ public class LUGARES extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INGRESE LOS DATOS SOLICITADOS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 20, 340, 47);
+        jLabel1.setBounds(140, 10, 340, 47);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(9, 9, 9));
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 130, 90, 30);
+        jLabel2.setBounds(80, 130, 100, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(9, 9, 9));
         jLabel3.setText("Direccion");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 170, 100, 30);
+        jLabel3.setBounds(70, 170, 110, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(9, 9, 9));
         jLabel4.setText("Ciudad");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(100, 210, 70, 38);
+        jLabel4.setBounds(90, 210, 80, 38);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(9, 9, 9));
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 250, 100, 38);
+        jLabel5.setBounds(70, 250, 110, 38);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(9, 9, 9));
         jLabel6.setText("Responsable");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 290, 130, 38);
+        jLabel6.setBounds(40, 290, 140, 38);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(9, 9, 9));
         jLabel7.setText("Clave");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(110, 90, 50, 30);
+        jLabel7.setBounds(100, 90, 60, 30);
         getContentPane().add(txt_nombre);
         txt_nombre.setBounds(180, 130, 200, 30);
 
@@ -145,14 +150,39 @@ public class LUGARES extends javax.swing.JFrame {
         getContentPane().add(txt_responsable);
         txt_responsable.setBounds(180, 290, 240, 30);
 
-        btn_guardar.setText("Guardar");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Opciones"));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txt_Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_BuscarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 22, 110, 40));
+
+        btn_buscar.setText("Buscar");
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 70, 40));
+
+        btn_update.setText("Actualizar");
+        btn_update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_updateActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 40));
+
+        btn_guardar.setText("Insertar mas");
         btn_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_guardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_guardar);
-        btn_guardar.setBounds(450, 330, 100, 40);
+        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 40));
 
         jButton2.setText("Ir al menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -160,12 +190,18 @@ public class LUGARES extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(340, 330, 90, 40);
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 90, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lugares.png"))); // NOI18N
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, 0, 600, 430);
+        jButton1.setText("Consultar Todo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 130, 40));
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(500, 70, 250, 280);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,7 +238,7 @@ public class LUGARES extends javax.swing.JFrame {
         cadena6 = txt_responsable.getText();
 
         if (txt_clave.getText().equals("")
-                || (txt_nombre.getText().equals("")
+            || (txt_nombre.getText().equals("")
                 || (txt_Direccion.getText().equals(""))
                 || (txt_ciudad.getText().equals(""))
                 || (txt_telefono.getText().equals(""))
@@ -216,21 +252,74 @@ public class LUGARES extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, "Se guardo correctamente \n", "FELICIDADES!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
 
         }
-        //Esto sirve para que despues de ingresar los datos se pongan vacios 
+        //Esto sirve para que despues de ingresar los datos se pongan vacios
         this.txt_clave.setText("");
         this.txt_nombre.setText("");
         this.txt_Direccion.setText("");
         this.txt_ciudad.setText("");
         this.txt_telefono.setText("");
         this.txt_responsable.setText("");
-
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         Principal frm= new Principal();
+       Principal frm= new Principal();
             frm.setVisible(true);
             this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
+        if(Controllers.updateData(" Lugares ", " clave='" +txt_clave.getText()+ "', Nombre='"+txt_nombre.getText()+"', Direccion='"+txt_Direccion.getText()+"', Ciudad='"+txt_ciudad.getText()+"', Telefono='"+txt_telefono.getText()+"', Responsable='"+txt_responsable.getText()+"'", "clave='"+txt_clave.getText()+"'")){
+            JOptionPane.showMessageDialog(null, "Datos Actualizados");
+        }else{
+            JOptionPane.showMessageDialog(null, "Error en la Actualizacion");
+        }
+    }//GEN-LAST:event_btn_updateActionPerformed
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+        
+          //Apartamos un contador para ver si hay resultados
+        int contador=0;
+        String clave="", nombre="", direccion="", ciudad="", telefono="", responsable="";
+        //A partir de aquí, después de introducir el código, checamos la existencia en la base de datos con el controller.
+        ResultSet rs1 = Controllers.mostrardatos(" Lugares ", " clave, Nombre, Direccion, Ciudad, Telefono, Responsable ", " clave = '"+txt_Buscar.getText()+"'" );
+          try {
+            while(rs1.next()){
+                contador++;
+                clave       = rs1.getString("clave");
+                nombre      = rs1.getString("Nombre");
+                direccion   = rs1.getString("Direccion");
+                ciudad     = rs1.getString("Ciudad");
+                telefono    = rs1.getString("Telefono");
+                responsable  = rs1.getString("Responsable");
+                
+            }
+          }catch(SQLException ex){
+              Logger.getLogger(Mod_Lugares.class.getName()).log(Level.SEVERE, null, ex);
+          }   
+         if(contador>0){
+            txt_clave.setText(clave);
+            txt_nombre.setText(nombre);
+            txt_Direccion.setText(direccion);
+            txt_ciudad.setText(ciudad);
+            txt_telefono.setText(telefono);
+            txt_responsable.setText(responsable);
+            
+        }else{
+            System.out.println("No hay");
+        }
+        
+        
+    }//GEN-LAST:event_btn_buscarActionPerformed
+
+    private void txt_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_BuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_BuscarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Table_Lugares frm= new Table_Lugares();
+        frm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,26 +338,29 @@ public class LUGARES extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LUGARES.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Lugares.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LUGARES.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Lugares.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LUGARES.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Lugares.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LUGARES.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mod_Lugares.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LUGARES().setVisible(true);
+                new Mod_Lugares().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_guardar;
+    private javax.swing.JButton btn_update;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -277,7 +369,8 @@ public class LUGARES extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_Direccion;
     private javax.swing.JTextField txt_ciudad;
     private javax.swing.JTextField txt_clave;
