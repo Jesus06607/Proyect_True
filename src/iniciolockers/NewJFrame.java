@@ -75,7 +75,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Contraseña");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 160, 81, 17);
+        jLabel3.setBounds(60, 160, 83, 15);
 
         txt_contra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +87,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel4.setText("Estatus");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 200, 52, 17);
+        jLabel4.setBounds(80, 200, 54, 15);
 
         txt_status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 250, 64, 17);
+        jLabel5.setBounds(70, 250, 62, 15);
 
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +111,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Correo");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(90, 290, 49, 17);
+        jLabel6.setBounds(90, 290, 48, 15);
 
         txt_correo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,15 +123,15 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel7.setText("Sexo");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 340, 34, 17);
+        jLabel7.setBounds(100, 340, 34, 15);
 
         jLabel1.setText("Clave");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 80, 38, 17);
+        jLabel1.setBounds(100, 80, 38, 15);
 
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 120, 57, 17);
+        jLabel2.setBounds(80, 120, 55, 15);
 
         txt_sexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
