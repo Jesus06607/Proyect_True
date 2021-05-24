@@ -22,6 +22,7 @@ public class LOCKERS extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Sistema de lockers de Ciudad Valles");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -56,13 +57,13 @@ public class LOCKERS extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(370, 370));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(12, 1, 102));
-        jLabel1.setText("        Ingrese la informacion");
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("        Ingrese la información");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 290, 50));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -98,7 +99,7 @@ public class LOCKERS extends javax.swing.JFrame {
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("FECHA DE ADQUISICON");
+        jLabel7.setText("FECHA DE ADQUISICIÓN");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 170, 30));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
@@ -160,7 +161,7 @@ public class LOCKERS extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 90, 40));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 640, 480));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 650, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -21,6 +21,7 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         botones();
         this.setTitle("Sistema de Lockers de Ciudad Valles");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -44,28 +45,28 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(880, 550));
         getContentPane().setLayout(null);
 
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 0, 204));
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Design by FZB & JMH²  U.X 1.0");
+        jLabel7.setText("Felipe de Jesús Zamora Baldazo & Jesús Martín Hernandez Hernandez");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(70, 450, 190, 20);
+        jLabel7.setBounds(0, 480, 540, 20);
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Inicio de sesión");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(50, 50, 182, 29);
+        jLabel8.setBounds(50, 50, 145, 27);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/logo.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(400, 30, 300, 320);
+        jLabel2.setBounds(520, 70, 310, 310);
 
-        btn1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(0, 255, 214));
+        btn1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        btn1.setForeground(new java.awt.Color(255, 255, 255));
         btn1.setText("Administrador");
         btn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn1.addActionListener(new java.awt.event.ActionListener() {
@@ -74,10 +75,10 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn1);
-        btn1.setBounds(60, 210, 140, 40);
+        btn1.setBounds(50, 210, 140, 40);
 
-        btn2.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(0, 255, 228));
+        btn2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        btn2.setForeground(new java.awt.Color(255, 255, 255));
         btn2.setText("Entrar como usuario");
         btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,34 +86,34 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn2);
-        btn2.setBounds(40, 280, 190, 40);
+        btn2.setBounds(10, 280, 220, 40);
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 0));
         jLabel3.setText("Créditos:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 440, 80, 40);
+        jLabel3.setBounds(10, 440, 80, 40);
 
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 0));
-        jLabel4.setText("Nombre:");
+        jLabel4.setText("Sa.H.Lo");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(290, 440, 80, 30);
+        jLabel4.setBounds(490, 10, 130, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/login.png"))); // NOI18N
         getContentPane().add(jLabel6);
         jLabel6.setBounds(70, 80, 100, 120);
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 20)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 0));
         jLabel5.setText("Cada flor es un alma que florece en la naturaleza");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(210, 380, 600, 40);
+        jLabel5.setBounds(380, 410, 500, 40);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 870, 510);
+        jLabel9.setBounds(0, 0, 900, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

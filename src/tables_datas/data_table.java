@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,6 +24,9 @@ public class data_table extends javax.swing.JFrame {
      */
     public data_table() {
         initComponents();
+        this.setTitle("Sistema de Lockers de Ciudad Valles");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
         DefaultTableModel modelo= new DefaultTableModel();
        
         modelo.addColumn("Clave");

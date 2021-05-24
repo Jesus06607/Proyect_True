@@ -22,6 +22,7 @@ public class LUGARES extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Sistema de Lockers de Ciudad Valles");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -51,7 +52,7 @@ public class LUGARES extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(600, 420));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));

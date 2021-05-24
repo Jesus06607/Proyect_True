@@ -22,6 +22,7 @@ public class LOGIN extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Sistema de Lockers de Ciudad Valles");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -44,7 +45,7 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(500, 500));
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/login.png"))); // NOI18N
@@ -56,7 +57,7 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("** INICIO DE SESION **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(154, 40, 226, 42);
+        jLabel2.setBounds(154, 40, 196, 42);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -101,7 +102,7 @@ public class LOGIN extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_login.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(-150, 0, 660, 480);
+        jLabel6.setBounds(-120, 0, 660, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
