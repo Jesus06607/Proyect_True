@@ -65,7 +65,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(600, 400));
+        setMinimumSize(new java.awt.Dimension(650, 420));
         getContentPane().setLayout(null);
 
         jButton1.setText("Insertar");
@@ -225,7 +225,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 680, 390);
+        jLabel9.setBounds(0, 0, 680, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
