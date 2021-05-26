@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import tables_datas.Table_turistas;
 
@@ -24,6 +25,9 @@ public class Mod_Turistas extends javax.swing.JFrame {
      */
     public Mod_Turistas() {
         initComponents();
+        this.setTitle("Sistema de Lockers de Ciudad Valles");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -57,9 +61,10 @@ public class Mod_Turistas extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 500));
+        setMinimumSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -71,52 +76,52 @@ public class Mod_Turistas extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLAVE");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 90, 58, 30);
+        jLabel2.setBounds(110, 90, 53, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("NOMBRE");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 130, 80, 30);
+        jLabel3.setBounds(90, 130, 71, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("TELEFONO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 180, 96, 30);
+        jLabel4.setBounds(80, 180, 87, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("DIRECCION");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 230, 104, 30);
+        jLabel5.setBounds(70, 230, 89, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("EDAD");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(120, 280, 51, 30);
+        jLabel6.setBounds(120, 280, 46, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("NACIONALIDAD");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 330, 141, 30);
+        jLabel7.setBounds(30, 330, 127, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("SEXO");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(120, 380, 49, 30);
+        jLabel8.setBounds(120, 380, 41, 30);
         getContentPane().add(txt_clave);
         txt_clave.setBounds(180, 90, 290, 30);
         getContentPane().add(txt_nombre);
@@ -195,9 +200,11 @@ public class Mod_Turistas extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(txt_Buscar)))
                 .addGap(18, 18, 18)
                 .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -206,11 +213,15 @@ public class Mod_Turistas extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(490, 90, 260, 290);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_turista.jpg"))); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(-10, 0, 810, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -357,6 +368,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_clave;
