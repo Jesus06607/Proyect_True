@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import tables_datas.Table_Lugares;
 
@@ -24,6 +25,9 @@ public class Mod_Lugares extends javax.swing.JFrame {
      */
     public Mod_Lugares() {
         initComponents();
+        this.setTitle("Sistema de Lockers de Ciudad Valles");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -55,58 +59,60 @@ public class Mod_Lugares extends javax.swing.JFrame {
         btn_guardar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(780, 400));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INGRESE LOS DATOS SOLICITADOS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(140, 10, 340, 47);
+        jLabel1.setBounds(140, 10, 280, 47);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(9, 9, 9));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 130, 100, 30);
+        jLabel2.setBounds(110, 130, 70, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(9, 9, 9));
-        jLabel3.setText("Direccion");
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Dirección");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 170, 110, 30);
+        jLabel3.setBounds(110, 170, 70, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(9, 9, 9));
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ciudad");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(90, 210, 80, 38);
+        jLabel4.setBounds(110, 210, 70, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(9, 9, 9));
-        jLabel5.setText("Telefono");
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Teléfono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 250, 110, 38);
+        jLabel5.setBounds(110, 250, 70, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(9, 9, 9));
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Responsable");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 290, 140, 38);
+        jLabel6.setBounds(80, 290, 100, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(9, 9, 9));
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Clave");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 90, 60, 30);
+        jLabel7.setBounds(110, 90, 60, 30);
         getContentPane().add(txt_nombre);
         txt_nombre.setBounds(180, 130, 200, 30);
 
@@ -124,7 +130,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_ciudad);
-        txt_ciudad.setBounds(180, 210, 300, 30);
+        txt_ciudad.setBounds(180, 210, 150, 30);
 
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,6 +208,10 @@ public class Mod_Lugares extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(500, 70, 250, 280);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_lugares.jpg"))); // NOI18N
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 0, 790, 410);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -369,6 +379,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_Direccion;

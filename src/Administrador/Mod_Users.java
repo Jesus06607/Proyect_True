@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import tables_datas.data_table;
 
@@ -24,6 +25,9 @@ public class Mod_Users extends javax.swing.JFrame {
      */
     public Mod_Users() {
         initComponents();
+        this.setTitle("Sistema de Lockers de Ciudad Valles");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -57,15 +61,18 @@ public class Mod_Users extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(800, 405));
         getContentPane().setLayout(null);
 
-        jLabel3.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 160, 81, 17);
+        jLabel3.setBounds(60, 150, 90, 30);
 
         txt_contra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,10 +82,12 @@ public class Mod_Users extends javax.swing.JFrame {
         getContentPane().add(txt_contra);
         txt_contra.setBounds(150, 150, 227, 30);
 
-        jLabel4.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estatus");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 200, 52, 17);
+        jLabel4.setBounds(90, 190, 60, 30);
 
         txt_status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,10 +97,12 @@ public class Mod_Users extends javax.swing.JFrame {
         getContentPane().add(txt_status);
         txt_status.setBounds(150, 190, 227, 30);
 
-        jLabel5.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 250, 64, 17);
+        jLabel5.setBounds(80, 240, 70, 30);
 
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,10 +112,12 @@ public class Mod_Users extends javax.swing.JFrame {
         getContentPane().add(txt_telefono);
         txt_telefono.setBounds(150, 240, 227, 30);
 
-        jLabel6.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Correo");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(90, 290, 49, 17);
+        jLabel6.setBounds(90, 290, 60, 30);
 
         txt_correo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,20 +127,26 @@ public class Mod_Users extends javax.swing.JFrame {
         getContentPane().add(txt_correo);
         txt_correo.setBounds(150, 290, 227, 30);
 
-        jLabel7.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Sexo");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 340, 34, 17);
+        jLabel7.setBounds(100, 330, 50, 30);
 
-        jLabel1.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Clave");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 80, 38, 17);
+        jLabel1.setBounds(90, 66, 60, 30);
 
-        jLabel2.setForeground(new java.awt.Color(11, 11, 11));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 120, 57, 17);
+        jLabel2.setBounds(80, 110, 70, 30);
 
         txt_sexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,14 +236,14 @@ public class Mod_Users extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_Buscar)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(txt_Buscar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -233,9 +252,14 @@ public class Mod_Users extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(430, 70, 270, 280);
 
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel8.setText("DATOS  DE USUARIOS");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(310, 10, 160, 40);
+        jLabel8.setBounds(310, 10, 150, 40);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_users.jpg"))); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 0, 800, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -409,6 +433,7 @@ public class Mod_Users extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_clave;

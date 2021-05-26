@@ -52,40 +52,54 @@ public class RENTAS extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(550, 535));
         getContentPane().setLayout(null);
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CLAVE DE LUGAR");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(60, 65, 120, 20);
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLAVE DE TURISTA");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(57, 120, 120, 30);
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("CLAVE DE LOCKER ");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 180, 120, 30);
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("CLAVE DE USUARIO");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(50, 240, 130, 30);
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("FECHA DE INICIO");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(61, 300, 120, 30);
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("FECHA DE FIN");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(80, 350, 100, 30);
 
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("INGRESO DE RENTA");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(48, 410, 130, 30);
@@ -104,7 +118,9 @@ public class RENTAS extends javax.swing.JFrame {
         getContentPane().add(ing_renta);
         ing_renta.setBounds(180, 410, 310, 30);
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("INGRESE DATOS DE LA RENTA");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(190, 0, 200, 40);
@@ -129,7 +145,7 @@ public class RENTAS extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_rentas.png"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 590, 520);
+        jLabel9.setBounds(0, 0, 600, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

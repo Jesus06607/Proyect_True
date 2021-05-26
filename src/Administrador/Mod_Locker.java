@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import tables_datas.Table_Lugares;
 import tables_datas.Table_lockers;
@@ -25,6 +26,9 @@ public class Mod_Locker extends javax.swing.JFrame {
      */
     public Mod_Locker() {
         initComponents();
+        this.setTitle("Sistema de Lockers de Ciudad Valles");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -58,66 +62,67 @@ public class Mod_Locker extends javax.swing.JFrame {
         btn_buscar = new javax.swing.JButton();
         txt_Buscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(12, 1, 102));
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("        INFORMACION DE USUARIOS");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(199, 25, 380, 50);
+        jLabel1.setBounds(360, 10, 340, 50);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLAVE");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(139, 95, 60, 30);
+        jLabel2.setBounds(150, 100, 60, 20);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("NOMBRE");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(119, 145, 100, 20);
+        jLabel3.setBounds(140, 140, 70, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("PRECIO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(129, 185, 80, 20);
+        jLabel4.setBounds(140, 180, 70, 20);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CAPACIDAD");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(99, 215, 100, 30);
+        jLabel5.setBounds(120, 220, 90, 20);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("COLOR");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(129, 255, 70, 30);
+        jLabel6.setBounds(150, 260, 60, 20);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel7.setText("FECHA DE ADQUISICON");
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("FECHA DE ADQUISICIÓN");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(19, 335, 190, 30);
+        jLabel7.setBounds(50, 340, 160, 20);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ESTATUS");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(119, 295, 80, 30);
+        jLabel8.setBounds(140, 300, 70, 20);
         getContentPane().add(txt_fadquisicion);
         txt_fadquisicion.setBounds(209, 335, 140, 30);
         getContentPane().add(txt_clave);
@@ -165,6 +170,7 @@ public class Mod_Locker extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Opciones"));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/insert.png"))); // NOI18N
         btn_guardar.setText("Insertar mas");
         btn_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,14 +179,16 @@ public class Mod_Locker extends javax.swing.JFrame {
         });
         jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 140, 40));
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Ir al menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 100, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 140, 40));
 
+        btn_update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/recarga.png"))); // NOI18N
         btn_update.setText("Actualizar");
         btn_update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,25 +197,31 @@ public class Mod_Locker extends javax.swing.JFrame {
         });
         jPanel1.add(btn_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 120, 40));
 
+        btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search12.png"))); // NOI18N
         btn_buscar.setText("Buscar");
         btn_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_buscarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 40));
-        jPanel1.add(txt_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 100, 40));
+        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 100, 40));
+        jPanel1.add(txt_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 100, 40));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search_much.png"))); // NOI18N
         jButton1.setText("Consultar Todo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 140, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 170, 40));
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(480, 90, 290, 320);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_locker.jpg"))); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(-10, 0, 890, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -306,6 +320,8 @@ public class Mod_Locker extends javax.swing.JFrame {
             txt_fadquisicion.setText(fadquisicion);
         }else{
             System.out.println("No hay");
+            JOptionPane.showMessageDialog(null, "No se encontro");
+
         }
     }//GEN-LAST:event_btn_buscarActionPerformed
 
@@ -373,6 +389,7 @@ public class Mod_Locker extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_capacidad;
