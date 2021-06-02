@@ -19,7 +19,7 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
     public INICIOLOCKERS() {
         initComponents();
         botones();
-        this.setTitle("Sistema de Lockers de Ciudad Valles");
+        this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
     }
