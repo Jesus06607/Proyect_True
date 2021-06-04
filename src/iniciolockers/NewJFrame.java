@@ -57,9 +57,6 @@ public class NewJFrame extends javax.swing.JFrame {
         txt_sexo = new javax.swing.JTextField();
         txt_clave = new javax.swing.JTextField();
         txt_nombre = new javax.swing.JTextField();
-        btn_update = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        txt_Buscar = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
@@ -68,6 +65,7 @@ public class NewJFrame extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(650, 420));
         getContentPane().setLayout(null);
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         jButton1.setText("Insertar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,7 +73,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(400, 110, 90, 30);
+        jButton1.setBounds(520, 310, 120, 40);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -182,46 +180,21 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_nombre);
         txt_nombre.setBounds(150, 110, 227, 30);
 
-        btn_update.setText("Actualizar");
-        btn_update.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_updateActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_update);
-        btn_update.setBounds(500, 110, 83, 30);
-
-        jButton3.setText("Buscar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(490, 70, 90, 30);
-
-        txt_Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_BuscarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txt_Buscar);
-        txt_Buscar.setBounds(390, 70, 98, 30);
-
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("INSERTE LA INFORMACION REQUERIDA");
+        jLabel8.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel8.setText("Inserte lo correspondiente al usuario");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(200, 10, 320, 40);
+        jLabel8.setBounds(180, 10, 350, 40);
 
-        jButton2.setText("Ir al menu");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
+        jButton2.setText("Atras");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(400, 160, 90, 40);
+        jButton2.setBounds(410, 310, 90, 40);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
         getContentPane().add(jLabel9);
@@ -293,54 +266,8 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_nombreActionPerformed
 
-    private void txt_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_BuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_BuscarActionPerformed
-
-    private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
-        if(Controllers.updateData("Usuarios", " Nombre='" +txt_nombre.getText()+ "', clave='"+txt_clave.getText()+"', Contraseña='"+txt_contra.getText()+"', Estatus='"+txt_status.getText()+"', Telefono='"+txt_telefono.getText()+"', Correo='"+txt_correo.getText()+"', Sexo='"+txt_sexo.getText()+"'", "clave='"+txt_clave.getText()+"'")){
-            JOptionPane.showMessageDialog(null, "Datos Actualizados");
-        }else{
-            JOptionPane.showMessageDialog(null, "Error en la Actualizacion");
-        }
-    }//GEN-LAST:event_btn_updateActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        //Apartamos un contador para ver si hay resultados
-        int contador=0;
-        String clave="", nombre="", contra="", estatus="", telefono="", correo="", sexo="";
-        //A partir de aquí, después de introducir el código, checamos la existencia en la base de datos con el controller.
-        ResultSet rs1 = Controllers.mostrardatos(" Usuarios ", " clave, Nombre, Contraseña, Estatus, Telefono, Correo, Sexo ", " clave = '"+txt_Buscar.getText()+"'" );
-        try {
-            while(rs1.next()){
-                contador++;
-                clave       = rs1.getString("clave");
-                nombre      = rs1.getString("Nombre");
-                contra      = rs1.getString("Contraseña");
-                estatus     = rs1.getString("Estatus");
-                telefono    = rs1.getString("Telefono");
-                correo      = rs1.getString("Correo");
-                sexo        = rs1.getString("Sexo");
-            }
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if(contador>0){
-            txt_clave.setText(clave);
-            txt_nombre.setText(nombre);
-            txt_contra.setText(contra);
-            txt_status.setText(estatus);
-            txt_telefono.setText(telefono);
-            txt_correo.setText(correo);
-            txt_sexo.setText(sexo);
-        }else{
-            System.out.println("No hay");
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Principal frm= new Principal();
+        Separador frm= new Separador();
         frm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -381,10 +308,8 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_update;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -394,7 +319,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txt_Buscar;
     private javax.swing.JTextField txt_clave;
     private javax.swing.JTextField txt_contra;
     private javax.swing.JTextField txt_correo;

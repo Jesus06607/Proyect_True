@@ -144,21 +144,23 @@ public class LOCKERS extends javax.swing.JFrame {
         });
         getContentPane().add(txt_estatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 110, 30));
 
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         btn_guardar.setText("Guardar");
         btn_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_guardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 80, 40));
+        getContentPane().add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 130, 40));
 
-        jButton3.setText("Ir al menu");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
+        jButton3.setText("Atras");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 90, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 130, 40));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 650, 490));
@@ -222,7 +224,7 @@ public class LOCKERS extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Principal frm= new Principal();
+        Separador frm= new Separador();
         frm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

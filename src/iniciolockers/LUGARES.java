@@ -58,7 +58,7 @@ public class LUGARES extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("INGRESE LOS DATOS SOLICITADOS");
+        jLabel1.setText("Ingrese los datos solicitados");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(90, 20, 340, 47);
 
@@ -146,6 +146,7 @@ public class LUGARES extends javax.swing.JFrame {
         getContentPane().add(txt_responsable);
         txt_responsable.setBounds(180, 290, 240, 30);
 
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         btn_guardar.setText("Guardar");
         btn_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,16 +154,17 @@ public class LUGARES extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_guardar);
-        btn_guardar.setBounds(450, 330, 100, 40);
+        btn_guardar.setBounds(380, 350, 120, 40);
 
-        jButton2.setText("Ir al menu");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
+        jButton2.setText("Atras");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(340, 330, 90, 40);
+        jButton2.setBounds(280, 350, 90, 40);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lugares.png"))); // NOI18N
         getContentPane().add(jLabel8);
@@ -228,7 +230,7 @@ public class LUGARES extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_guardarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         Principal frm= new Principal();
+         Separador frm= new Separador();
             frm.setVisible(true);
             this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed

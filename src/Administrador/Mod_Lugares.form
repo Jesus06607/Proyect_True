@@ -252,6 +252,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_buscar">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/IMAGENES/search12.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Buscar"/>
           </Properties>
           <Events>
@@ -265,6 +268,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_update">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/IMAGENES/recarga.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
           <Events>
@@ -278,6 +284,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_guardar">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/IMAGENES/insert.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Insertar mas"/>
           </Properties>
           <Events>
@@ -291,6 +300,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/IMAGENES/back.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Ir al menu"/>
           </Properties>
           <Events>
@@ -304,6 +316,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/IMAGENES/search_much.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Consultar Todo"/>
           </Properties>
           <Events>

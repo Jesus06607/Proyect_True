@@ -58,12 +58,13 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 1, 15)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("BIENVENIDO A ADMINISTRACIÓN");
+        jLabel1.setText("Bienvenido a la administracion");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(320, 10, 260, 51);
+        jLabel1.setBounds(230, 10, 330, 51);
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton4.setText("Regresar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +80,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
         jLabel2.setText("Aqui usted puede administrar toda la informacion agregada. ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 20, 390, 35);
+        jLabel2.setBounds(20, 20, 460, 35);
 
         jButton6.setText("Lockers");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -118,12 +119,12 @@ public class Principal extends javax.swing.JFrame {
         jButton9.setBounds(100, 120, 87, 38);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 70, 460, 190);
+        jPanel1.setBounds(10, 70, 490, 190);
 
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
-        jLabel3.setText("INSERTAR INFORMACIÓN EN:");
+        jLabel3.setText("Insertar informacion en:");
 
         jButton5.setText("Lockers");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +190,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(500, 70, 320, 190);
+        jPanel2.setBounds(520, 70, 320, 190);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_principal.jpg"))); // NOI18N
         getContentPane().add(jLabel5);

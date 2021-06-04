@@ -77,51 +77,51 @@ public class Mod_Turistas extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("CLAVE");
+        jLabel2.setText("Clave");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 90, 53, 30);
+        jLabel2.setBounds(110, 90, 50, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("NOMBRE");
+        jLabel3.setText("Nombre");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 130, 71, 30);
+        jLabel3.setBounds(90, 130, 72, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("TELEFONO");
+        jLabel4.setText("Telefono");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 180, 87, 30);
+        jLabel4.setBounds(80, 180, 78, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("DIRECCION");
+        jLabel5.setText("Direccion");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 230, 89, 30);
+        jLabel5.setBounds(70, 230, 83, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("EDAD");
+        jLabel6.setText("Edad");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(120, 280, 46, 30);
+        jLabel6.setBounds(120, 280, 43, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("NACIONALIDAD");
+        jLabel7.setText("Nacionalidad");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 330, 127, 30);
+        jLabel7.setBounds(30, 330, 140, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("SEXO");
+        jLabel8.setText("Sexo");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(120, 380, 41, 30);
+        jLabel8.setBounds(120, 380, 44, 30);
         getContentPane().add(txt_clave);
         txt_clave.setBounds(180, 90, 290, 30);
         getContentPane().add(txt_nombre);
@@ -145,6 +145,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Opciones "));
 
+        btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search12.png"))); // NOI18N
         btn_buscar.setText("Buscar");
         btn_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +153,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
             }
         });
 
+        btn_update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/recarga.png"))); // NOI18N
         btn_update.setText("Actualizar");
         btn_update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +161,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/insert.png"))); // NOI18N
         jButton1.setText("Insertar mas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +169,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Ir al Menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +177,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search_much.png"))); // NOI18N
         jButton3.setText("Consultar Todo");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,8 +198,10 @@ public class Mod_Turistas extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -213,7 +220,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);

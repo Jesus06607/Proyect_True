@@ -166,6 +166,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
         });
         jPanel1.add(txt_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 22, 110, 40));
 
+        btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search12.png"))); // NOI18N
         btn_buscar.setText("Buscar");
         btn_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,6 +175,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
         });
         jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 70, 40));
 
+        btn_update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/recarga.png"))); // NOI18N
         btn_update.setText("Actualizar");
         btn_update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +184,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
         });
         jPanel1.add(btn_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 40));
 
+        btn_guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/insert.png"))); // NOI18N
         btn_guardar.setText("Insertar mas");
         btn_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,6 +193,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
         });
         jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 40));
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Ir al menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,6 +202,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 90, 40));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search_much.png"))); // NOI18N
         jButton1.setText("Consultar Todo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

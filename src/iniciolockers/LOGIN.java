@@ -57,7 +57,7 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("** INICIO DE SESION **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(154, 40, 196, 42);
+        jLabel2.setBounds(154, 40, 226, 42);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -71,14 +71,18 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contraseña");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 260, 90, 33);
+        jLabel4.setBounds(50, 260, 110, 33);
 
         text_usuario.setToolTipText("");
         text_usuario.setName(""); // NOI18N
         getContentPane().add(text_usuario);
         text_usuario.setBounds(170, 210, 190, 30);
 
-        clave.setText("jPasswordField1");
+        clave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                claveActionPerformed(evt);
+            }
+        });
         getContentPane().add(clave);
         clave.setBounds(170, 260, 190, 30);
 
@@ -141,6 +145,10 @@ public class LOGIN extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void claveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_claveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_claveActionPerformed
 
     /**
      * @param args the command line arguments

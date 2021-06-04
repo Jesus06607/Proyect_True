@@ -71,56 +71,56 @@ public class Mod_Locker extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("        INFORMACION DE USUARIOS");
+        jLabel1.setText("       Informacion de lockers");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(360, 10, 340, 50);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("CLAVE");
+        jLabel2.setText("Clave");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(150, 100, 60, 20);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("NOMBRE");
+        jLabel3.setText("Nombre");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(140, 140, 70, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("PRECIO");
+        jLabel4.setText("Precio");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(140, 180, 70, 20);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("CAPACIDAD");
+        jLabel5.setText("Capacidad");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(120, 220, 90, 20);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("COLOR");
+        jLabel6.setText("Color");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(150, 260, 60, 20);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("FECHA DE ADQUISICIÓN");
+        jLabel7.setText("Fecha de Adquisicion");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(50, 340, 160, 20);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("ESTATUS");
+        jLabel8.setText("Estatus");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(140, 300, 70, 20);
         getContentPane().add(txt_fadquisicion);

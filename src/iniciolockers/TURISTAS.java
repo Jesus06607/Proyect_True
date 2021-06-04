@@ -60,7 +60,7 @@ public class TURISTAS extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("DATOS DEL TURISTA");
+        jLabel1.setText("Datos del turista");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(250, 30, 200, 39);
 
@@ -69,49 +69,49 @@ public class TURISTAS extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLAVE");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 90, 53, 30);
+        jLabel2.setBounds(110, 90, 58, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("NOMBRE");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 130, 71, 30);
+        jLabel3.setBounds(90, 130, 80, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("TELEFONO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 180, 87, 30);
+        jLabel4.setBounds(80, 180, 96, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("DIRECCION");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 230, 89, 30);
+        jLabel5.setBounds(70, 230, 104, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("EDAD");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(120, 280, 46, 30);
+        jLabel6.setBounds(120, 280, 51, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("NACIONALIDAD");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 330, 127, 30);
+        jLabel7.setBounds(30, 330, 141, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("SEXO");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(120, 380, 41, 30);
+        jLabel8.setBounds(120, 380, 49, 30);
         getContentPane().add(txt_clave);
         txt_clave.setBounds(180, 90, 290, 30);
         getContentPane().add(txt_nombre);
@@ -133,6 +133,7 @@ public class TURISTAS extends javax.swing.JFrame {
         getContentPane().add(txt_sexo);
         txt_sexo.setBounds(180, 380, 290, 30);
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,9 +141,10 @@ public class TURISTAS extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(470, 430, 80, 40);
+        jButton1.setBounds(430, 430, 120, 40);
 
-        jButton2.setText("Ir al menu");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
+        jButton2.setText("Atras");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -153,7 +155,7 @@ public class TURISTAS extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_turista.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 710, 510);
+        jLabel9.setBounds(0, 10, 710, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -196,7 +198,7 @@ public class TURISTAS extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_nacionActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Principal frm= new Principal();
+        Separador frm= new Separador();
         frm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
