@@ -38,6 +38,7 @@ public class Login_empleado extends javax.swing.JFrame {
         clave = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
@@ -52,7 +53,7 @@ public class Login_empleado extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("** INICIO DE SESION **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 30, 226, 42);
+        jLabel2.setBounds(130, 30, 196, 42);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -66,7 +67,7 @@ public class Login_empleado extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contraseña");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 250, 119, 33);
+        jLabel4.setBounds(60, 250, 100, 33);
 
         text_usuario.setToolTipText("");
         text_usuario.setName(""); // NOI18N
@@ -98,6 +99,10 @@ public class Login_empleado extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(260, 300, 90, 40);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_login_empleado.jpg"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(-10, 0, 500, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -184,6 +189,7 @@ public class Login_empleado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField text_usuario;
     // End of variables declaration//GEN-END:variables
 }

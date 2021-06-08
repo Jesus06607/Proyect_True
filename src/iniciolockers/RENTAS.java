@@ -119,11 +119,11 @@ public class RENTAS extends javax.swing.JFrame {
         ing_renta.setBounds(180, 410, 310, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Ingrese los datos de la renta");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(190, 0, 230, 40);
+        jLabel8.setBounds(170, 0, 290, 40);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         jButton1.setText("Guardar");

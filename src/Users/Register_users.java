@@ -50,6 +50,7 @@ public class Register_users extends javax.swing.JFrame {
         txt_sexo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 500));
@@ -67,49 +68,49 @@ public class Register_users extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLAVE");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 90, 58, 30);
+        jLabel2.setBounds(110, 90, 53, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("NOMBRE");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 130, 80, 30);
+        jLabel3.setBounds(90, 130, 71, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("TELEFONO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(80, 180, 96, 30);
+        jLabel4.setBounds(80, 180, 87, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("DIRECCION");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 230, 104, 30);
+        jLabel5.setBounds(70, 230, 89, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("EDAD");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(120, 280, 51, 30);
+        jLabel6.setBounds(120, 280, 46, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("NACIONALIDAD");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 330, 141, 30);
+        jLabel7.setBounds(30, 330, 127, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("SEXO");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(120, 380, 49, 30);
+        jLabel8.setBounds(120, 380, 41, 30);
         getContentPane().add(txt_clave);
         txt_clave.setBounds(180, 90, 290, 30);
         getContentPane().add(txt_nombre);
@@ -149,7 +150,11 @@ public class Register_users extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(560, 430, 90, 40);
+        jButton2.setBounds(560, 430, 110, 40);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_registrer_users.jpg"))); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 0, 810, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -243,6 +248,7 @@ public class Register_users extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txt_clave;
     private javax.swing.JTextField txt_direccion;
     private javax.swing.JTextField txt_edad;

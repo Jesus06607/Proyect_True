@@ -47,6 +47,7 @@ public class U_principal extends javax.swing.JFrame {
         table_catalogo = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(720, 400));
@@ -60,13 +61,13 @@ public class U_principal extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(120, 130, 50, 32);
         getContentPane().add(txt_Lugar);
-        txt_Lugar.setBounds(170, 130, 160, 34);
+        txt_Lugar.setBounds(170, 130, 160, 19);
 
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 170, 137, 33);
+        jLabel3.setBounds(60, 160, 95, 33);
         getContentPane().add(txt_cantidad);
-        txt_cantidad.setBounds(170, 170, 160, 34);
+        txt_cantidad.setBounds(170, 170, 160, 19);
 
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");
         getContentPane().add(jLabel4);
@@ -103,7 +104,11 @@ public class U_principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 212, 82, 40);
+        jButton3.setBounds(100, 212, 97, 40);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_U_Principal.jpg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 740, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -198,6 +203,7 @@ public class U_principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_catalogo;
     private javax.swing.JTextField txt_Lugar;

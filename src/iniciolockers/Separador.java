@@ -32,6 +32,7 @@ public class Separador extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
@@ -44,7 +45,7 @@ public class Separador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(100, 80, 140, 40);
+        jButton1.setBounds(120, 90, 140, 40);
 
         jButton2.setText("Empleado");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -53,13 +54,17 @@ public class Separador extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(110, 130, 110, 40);
+        jButton2.setBounds(130, 140, 110, 40);
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(9, 4, 4));
         jLabel1.setText("Regresar como:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 30, 170, 40);
+        jLabel1.setBounds(110, 40, 170, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_separador.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-400, -60, 790, 370);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,5 +120,6 @@ public class Separador extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -74,6 +74,7 @@ public class Table_lockers extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         table_locker = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
@@ -90,7 +91,12 @@ public class Table_lockers extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_locker);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 20, 1010, 402);
+        jScrollPane1.setBounds(20, 70, 1010, 403);
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setText("Lockers");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(420, 0, 160, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -131,6 +137,7 @@ public class Table_lockers extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_locker;
     // End of variables declaration//GEN-END:variables

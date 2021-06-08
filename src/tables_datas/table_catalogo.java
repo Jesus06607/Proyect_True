@@ -60,9 +60,11 @@ public class table_catalogo extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         table_catalogo = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
+        getContentPane().setLayout(null);
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,22 +76,13 @@ public class table_catalogo extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(table_catalogo);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 50, 452, 375);
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setText("Catálogo de lockers");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(50, 0, 400, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,6 +123,7 @@ public class table_catalogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_catalogo;
     // End of variables declaration//GEN-END:variables
