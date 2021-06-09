@@ -184,7 +184,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(1, 1, 1));
         jLabel8.setText("Inserte lo correspondiente al usuario");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(220, 10, 280, 40);
+        jLabel8.setBounds(220, 10, 340, 40);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Atras");

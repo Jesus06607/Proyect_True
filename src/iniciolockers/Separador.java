@@ -5,7 +5,7 @@
  */
 package iniciolockers;
 
-import Users.Login_empleado;
+import Act_Empleado.Login_empleado;
 
 /**
  *

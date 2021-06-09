@@ -5,6 +5,7 @@
  */
 package iniciolockers;
 
+import SQL.Controllers;
 import javax.swing.ImageIcon;
 
 /**
@@ -39,15 +40,15 @@ public class RENTAS extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        cv_Lugar = new javax.swing.JTextField();
-        cv_Turista = new javax.swing.JTextField();
-        cv_Loker = new javax.swing.JTextField();
-        cv_usuario = new javax.swing.JTextField();
-        finicio = new javax.swing.JTextField();
-        ffin = new javax.swing.JTextField();
-        ing_renta = new javax.swing.JTextField();
+        txt_Lugar = new javax.swing.JTextField();
+        txt_Turista = new javax.swing.JTextField();
+        txt_Loker = new javax.swing.JTextField();
+        txt_Usuario = new javax.swing.JTextField();
+        txt_Inicio = new javax.swing.JTextField();
+        txt_Final = new javax.swing.JTextField();
+        txt_Renta = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_Guardar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
@@ -60,63 +61,63 @@ public class RENTAS extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CLAVE DE LUGAR");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(60, 65, 120, 20);
+        jLabel1.setBounds(50, 70, 120, 20);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CLAVE DE TURISTA");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(57, 120, 120, 30);
+        jLabel2.setBounds(37, 120, 140, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("CLAVE DE LOCKER ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 180, 120, 30);
+        jLabel3.setBounds(40, 180, 150, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("CLAVE DE USUARIO");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 240, 130, 30);
+        jLabel4.setBounds(30, 240, 140, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("FECHA DE INICIO");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(61, 300, 120, 30);
+        jLabel5.setBounds(50, 300, 120, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("FECHA DE FIN");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(80, 350, 100, 30);
+        jLabel6.setBounds(70, 350, 100, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("INGRESO DE RENTA");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(48, 410, 130, 30);
-        getContentPane().add(cv_Lugar);
-        cv_Lugar.setBounds(180, 60, 310, 30);
-        getContentPane().add(cv_Turista);
-        cv_Turista.setBounds(180, 120, 310, 30);
-        getContentPane().add(cv_Loker);
-        cv_Loker.setBounds(180, 180, 320, 30);
-        getContentPane().add(cv_usuario);
-        cv_usuario.setBounds(180, 240, 310, 30);
-        getContentPane().add(finicio);
-        finicio.setBounds(180, 300, 310, 30);
-        getContentPane().add(ffin);
-        ffin.setBounds(180, 350, 300, 30);
-        getContentPane().add(ing_renta);
-        ing_renta.setBounds(180, 410, 310, 30);
+        jLabel7.setBounds(28, 410, 150, 30);
+        getContentPane().add(txt_Lugar);
+        txt_Lugar.setBounds(180, 60, 160, 30);
+        getContentPane().add(txt_Turista);
+        txt_Turista.setBounds(180, 120, 160, 30);
+        getContentPane().add(txt_Loker);
+        txt_Loker.setBounds(180, 180, 160, 30);
+        getContentPane().add(txt_Usuario);
+        txt_Usuario.setBounds(180, 240, 160, 30);
+        getContentPane().add(txt_Inicio);
+        txt_Inicio.setBounds(180, 300, 160, 30);
+        getContentPane().add(txt_Final);
+        txt_Final.setBounds(180, 350, 160, 30);
+        getContentPane().add(txt_Renta);
+        txt_Renta.setBounds(180, 410, 160, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
@@ -125,15 +126,15 @@ public class RENTAS extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(170, 0, 290, 40);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
-        jButton1.setText("Guardar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_Guardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
+        btn_Guardar.setText("Guardar");
+        btn_Guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_GuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(330, 460, 140, 40);
+        getContentPane().add(btn_Guardar);
+        btn_Guardar.setBounds(330, 460, 140, 40);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Atras");
@@ -156,9 +157,42 @@ public class RENTAS extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GuardarActionPerformed
+        
+                String cadena1, cadena2, cadena3, cadena4, cadena5, cadena6, cadena7;
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+        cadena1 = txt_Lugar.getText();
+        cadena2 = txt_Turista.getText();
+        cadena3 = txt_Loker.getText();
+        cadena4 = txt_Usuario.getText();
+        cadena5 = txt_Inicio.getText();
+        cadena6 = txt_Final.getText();
+        cadena7 = txt_Renta.getText();
+
+        if (txt_Lugar.getText().equals("")
+                || (txt_Turista.getText().equals("")
+                || (txt_Loker.getText().equals(""))
+                || (txt_Usuario.getText().equals(""))
+                || (txt_Inicio.getText().equals(""))
+                || (txt_Final.getText().equals(""))
+                || (txt_Renta.getText().equals("")))) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Debe llenar todos los campos \n", "AVISO!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            txt_Turista.requestFocus();
+        } else if (Controllers.addData(" Rentas ", " Clave_Lugar, Clave_Turistas, Clave_Locker, Clave_Usuario, Fecha_Inicio, Fecha_Fin, Ingresos_Renta ", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "' ")) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Se guardo correctamente \n", "FELICIDADES!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //Esto sirve para que despues de ingresar los datos se pongan vacios 
+        this.txt_Lugar.setText("");
+        this.txt_Turista.setText("");
+        this.txt_Loker.setText("");
+        this.txt_Usuario.setText("");
+        this.txt_Inicio.setText("");
+        this.txt_Final.setText("");
+        this.txt_Renta.setText("");
+        
+        
+    }//GEN-LAST:event_btn_GuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,14 +230,7 @@ public class RENTAS extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField cv_Loker;
-    private javax.swing.JTextField cv_Lugar;
-    private javax.swing.JTextField cv_Turista;
-    private javax.swing.JTextField cv_usuario;
-    private javax.swing.JTextField ffin;
-    private javax.swing.JTextField finicio;
-    private javax.swing.JTextField ing_renta;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_Guardar;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -214,5 +241,12 @@ public class RENTAS extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField txt_Final;
+    private javax.swing.JTextField txt_Inicio;
+    private javax.swing.JTextField txt_Loker;
+    private javax.swing.JTextField txt_Lugar;
+    private javax.swing.JTextField txt_Renta;
+    private javax.swing.JTextField txt_Turista;
+    private javax.swing.JTextField txt_Usuario;
     // End of variables declaration//GEN-END:variables
 }

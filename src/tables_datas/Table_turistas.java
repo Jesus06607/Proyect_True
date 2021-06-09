@@ -79,6 +79,7 @@ public class Table_turistas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(null);
 
         table_turista.setModel(new javax.swing.table.DefaultTableModel(
@@ -92,7 +93,7 @@ public class Table_turistas extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_turista);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 40, 985, 403);
+        jScrollPane1.setBounds(20, 40, 985, 402);
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
         jLabel1.setText("Turistas");
