@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import tables_datas.data_table;
 
@@ -26,6 +27,9 @@ public class U_principal extends javax.swing.JFrame {
     public U_principal() {
         initComponents();
         Datas();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -53,25 +57,29 @@ public class U_principal extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(720, 400));
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel1.setText("Catalogo de lockers");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(326, 16, 153, 30);
+        jLabel1.setBounds(279, 16, 200, 30);
 
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setText("Lugar");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 130, 50, 32);
+        jLabel2.setBounds(110, 130, 60, 32);
         getContentPane().add(txt_Lugar);
-        txt_Lugar.setBounds(170, 130, 160, 34);
+        txt_Lugar.setBounds(170, 130, 160, 19);
 
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 170, 137, 33);
+        jLabel3.setBounds(20, 160, 149, 33);
         getContentPane().add(txt_cantidad);
-        txt_cantidad.setBounds(170, 170, 160, 34);
+        txt_cantidad.setBounds(170, 170, 160, 19);
 
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(170, 58, 474, 36);
+        jLabel4.setBounds(134, 58, 500, 36);
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,7 +112,7 @@ public class U_principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 212, 82, 40);
+        jButton3.setBounds(100, 212, 97, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_U_Principal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);

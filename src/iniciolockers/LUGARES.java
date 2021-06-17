@@ -164,7 +164,7 @@ public class LUGARES extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(280, 350, 90, 40);
+        jButton2.setBounds(260, 350, 110, 40);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lugares.png"))); // NOI18N
         getContentPane().add(jLabel8);

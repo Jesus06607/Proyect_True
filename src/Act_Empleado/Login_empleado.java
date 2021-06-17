@@ -7,6 +7,7 @@ package Act_Empleado;
 
 import Act_Empleado.Empleado;
 import iniciolockers.INICIOLOCKERS;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +21,9 @@ public class Login_empleado extends javax.swing.JFrame {
      */
     public Login_empleado() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -50,11 +54,11 @@ public class Login_empleado extends javax.swing.JFrame {
         jLabel1.setBounds(180, 70, 100, 100);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("** INICIO DE SESION **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(130, 30, 226, 42);
+        jLabel2.setBounds(120, 10, 230, 60);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N

@@ -26,7 +26,7 @@ public class Mod_Locker extends javax.swing.JFrame {
      */
     public Mod_Locker() {
         initComponents();
-        this.setTitle("Sistema de Lockers de Ciudad Valles");
+      this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
     }

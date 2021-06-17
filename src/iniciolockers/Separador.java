@@ -6,6 +6,7 @@
 package iniciolockers;
 
 import Act_Empleado.Login_empleado;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,6 +19,9 @@ public class Separador extends javax.swing.JFrame {
      */
     public Separador() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**

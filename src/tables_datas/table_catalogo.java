@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,6 +24,9 @@ public class table_catalogo extends javax.swing.JFrame {
      */
     public table_catalogo() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
         
          //Tabla de datos
         DefaultTableModel modelo = new DefaultTableModel();

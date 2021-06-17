@@ -14,6 +14,7 @@ import iniciolockers.LUGARES;
 import iniciolockers.NewJFrame;
 import iniciolockers.RENTAS;
 import iniciolockers.TURISTAS;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -26,6 +27,9 @@ public class Empleado extends javax.swing.JFrame {
      */
     public Empleado() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -65,10 +69,10 @@ public class Empleado extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(130, 110, 140, 36);
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel1.setText("Menú  del  empleado");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 20, 208, 54);
+        jLabel1.setBounds(120, 10, 180, 54);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_menuempleado.jpg"))); // NOI18N
         getContentPane().add(jLabel2);

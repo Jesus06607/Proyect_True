@@ -24,7 +24,7 @@ public class Table_lockers extends javax.swing.JFrame {
      */
     public Table_lockers() {
         initComponents();
-        this.setTitle("Sistema de Lockers de Ciudad Valles");
+           this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
         DefaultTableModel modelo= new DefaultTableModel();

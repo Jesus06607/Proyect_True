@@ -5,6 +5,8 @@
  */
 package Act_Empleado;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author martin
@@ -16,6 +18,9 @@ public class Cobros extends javax.swing.JFrame {
      */
     public Cobros() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**
@@ -41,18 +46,26 @@ public class Cobros extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(500, 500));
+        setMinimumSize(new java.awt.Dimension(500, 350));
         getContentPane().setLayout(null);
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cobros de hospedaje");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 40, 190, 30);
+        jLabel1.setBounds(140, 50, 160, 30);
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Dias hospedado:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 230, 130, 30);
+        jLabel2.setBounds(40, 220, 130, 30);
 
         jButton1.setText("Buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -61,51 +74,67 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(370, 100, 70, 27);
-
-        jTextField1.setText("jTextField1");
+        jButton1.setBounds(370, 100, 70, 25);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(280, 100, 90, 34);
-
-        jTextField2.setText("jTextField2");
+        jTextField1.setBounds(280, 100, 90, 30);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(170, 100, 98, 34);
+        jTextField2.setBounds(170, 89, 90, 30);
 
-        jLabel3.setText("Fecha de entrada");
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Fecha de entrada:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 100, 140, 30);
-
-        jTextField3.setText("jTextField2");
+        jLabel3.setBounds(20, 90, 140, 30);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(170, 140, 98, 34);
+        jTextField3.setBounds(170, 130, 90, 30);
 
-        jLabel4.setText("Fecha de salida");
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Fecha de salida:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 140, 110, 30);
-
-        jTextField4.setText("jTextField4");
+        jLabel4.setBounds(40, 130, 130, 30);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(170, 230, 98, 34);
+        jTextField4.setBounds(170, 219, 90, 30);
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Precio de Locker:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 180, 130, 30);
-
-        jTextField5.setText("jTextField5");
+        jLabel5.setBounds(40, 170, 130, 30);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(170, 180, 98, 34);
+        jTextField5.setBounds(170, 169, 90, 30);
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Costos de Lockers");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(320, 150, 140, 30);
+        jLabel6.setBounds(300, 150, 140, 30);
 
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Por  hora: $100");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(330, 170, 120, 30);
+        jLabel7.setBounds(310, 180, 120, 30);
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Por  dia: $1000");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(330, 200, 120, 30);
+        jLabel8.setBounds(310, 210, 120, 30);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/tarjetas.png"))); // NOI18N
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(370, 0, 110, 99);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_cobros_1.jpg"))); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(0, 0, 570, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -152,6 +181,7 @@ public class Cobros extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -159,6 +189,7 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

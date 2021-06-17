@@ -5,6 +5,8 @@
  */
 package Administrador;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author martin
@@ -16,6 +18,9 @@ public class Mod_Rentas extends javax.swing.JFrame {
      */
     public Mod_Rentas() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
     }
 
     /**

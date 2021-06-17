@@ -24,7 +24,7 @@ public class data_table extends javax.swing.JFrame {
      */
     public data_table() {
         initComponents();
-        this.setTitle("Sistema de Lockers de Ciudad Valles");
+          this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
         DefaultTableModel modelo= new DefaultTableModel();
