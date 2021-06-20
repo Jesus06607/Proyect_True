@@ -173,7 +173,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
                 btn_buscarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 70, 40));
+        jPanel1.add(btn_buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 110, 40));
 
         btn_update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/recarga.png"))); // NOI18N
         btn_update.setText("Actualizar");
@@ -191,7 +191,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
                 btn_guardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 40));
+        jPanel1.add(btn_guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 140, 40));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Ir al menu");
@@ -200,7 +200,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 90, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 120, 40));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/search_much.png"))); // NOI18N
         jButton1.setText("Consultar Todo");
@@ -209,7 +209,7 @@ public class Mod_Lugares extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 130, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 150, 40));
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(500, 70, 250, 280);

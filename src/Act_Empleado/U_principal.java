@@ -67,14 +67,14 @@ public class U_principal extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(110, 130, 60, 32);
         getContentPane().add(txt_Lugar);
-        txt_Lugar.setBounds(170, 130, 160, 19);
+        txt_Lugar.setBounds(170, 119, 180, 30);
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(20, 160, 149, 33);
         getContentPane().add(txt_cantidad);
-        txt_cantidad.setBounds(170, 170, 160, 19);
+        txt_cantidad.setBounds(170, 159, 180, 30);
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");

@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[800, 405]"/>
+      <Dimension value="[800, 430]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -48,6 +48,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_contra">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_contraActionPerformed"/>
       </Events>
@@ -245,7 +248,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="430" y="70" width="270" height="280"/>
+          <AbsoluteConstraints x="430" y="70" width="300" height="320"/>
         </Constraint>
       </Constraints>
 
@@ -259,13 +262,14 @@
                       <Component id="jButton2" min="-2" pref="124" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="txt_Buscar" min="-2" pref="98" max="-2" attributes="0"/>
-                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" pref="90" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="jButton3" min="-2" pref="116" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="btn_update" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_update" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnContraseña" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <EmptySpace pref="62" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -278,10 +282,12 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btn_update" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnContraseña" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton4" max="32767" attributes="0"/>
+                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -348,6 +354,17 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnContrase&#xf1;a">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/IMAGENES/contrase&#xf1;a_1.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Generar contrase&#xf1;a"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContrase&#xf1;aActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
