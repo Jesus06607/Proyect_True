@@ -66,6 +66,7 @@ public class Cobros extends javax.swing.JFrame {
         txt_Buscar = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         txt_hEntrada = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(830, 410));
@@ -197,7 +198,7 @@ public class Cobros extends javax.swing.JFrame {
         jPanel1.add(jLabel9);
         jLabel9.setBounds(20, 90, 110, 17);
         jPanel1.add(txt_hSalida);
-        txt_hSalida.setBounds(130, 80, 80, 34);
+        txt_hSalida.setBounds(120, 80, 80, 34);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(460, 180, 250, 210);
@@ -238,6 +239,10 @@ public class Cobros extends javax.swing.JFrame {
         jLabel10.setBounds(60, 200, 130, 30);
         getContentPane().add(txt_hEntrada);
         txt_hEntrada.setBounds(200, 200, 90, 34);
+
+        jLabel12.setText("Ingrese la clave:");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(80, 80, 120, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -392,6 +397,7 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
