@@ -162,11 +162,11 @@ public class Cobros extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(246, 1, 97));
         jLabel2.setText("Cantidad:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 120, 90, 30);
+        jLabel2.setBounds(50, 120, 80, 30);
 
         txt_cantidad.setText("0");
         jPanel1.add(txt_cantidad);
-        txt_cantidad.setBounds(100, 120, 90, 30);
+        txt_cantidad.setBounds(120, 120, 90, 30);
 
         jButton2.setText("Guardar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -194,14 +194,14 @@ public class Cobros extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(50, 150, 46, 27);
 
-        jLabel9.setText("Hora de salida");
+        jLabel9.setText("Hora de salida:");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(20, 90, 110, 17);
+        jLabel9.setBounds(10, 90, 110, 20);
         jPanel1.add(txt_hSalida);
-        txt_hSalida.setBounds(120, 80, 80, 34);
+        txt_hSalida.setBounds(120, 80, 90, 34);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(460, 180, 250, 210);
+        jPanel1.setBounds(460, 180, 260, 220);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
         jPanel2.setLayout(null);

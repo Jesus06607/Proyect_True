@@ -60,26 +60,26 @@ public class U_principal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel1.setText("Catalogo de lockers");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(279, 16, 200, 30);
+        jLabel1.setBounds(279, 16, 250, 30);
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setText("Lugar");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(140, 120, 60, 32);
         getContentPane().add(txt_Lugar);
-        txt_Lugar.setBounds(210, 120, 180, 30);
+        txt_Lugar.setBounds(210, 120, 140, 30);
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(20, 160, 174, 33);
         getContentPane().add(txt_cantidad);
-        txt_cantidad.setBounds(210, 160, 180, 30);
+        txt_cantidad.setBounds(210, 160, 140, 30);
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(134, 58, 586, 36);
+        jLabel4.setBounds(90, 60, 586, 36);
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -92,7 +92,7 @@ public class U_principal extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_catalogo);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(420, 120, 300, 100);
+        jScrollPane1.setBounds(390, 120, 300, 100);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         jButton1.setText("Guardar");
@@ -116,7 +116,7 @@ public class U_principal extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_U_Principal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 740, 300);
+        jLabel6.setBounds(0, 0, 790, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

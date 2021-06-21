@@ -304,7 +304,7 @@ public class Mod_Locker extends javax.swing.JFrame {
                 capacidad     = rs1.getString("Capacidad");
                 color    = rs1.getString("Color");
                 estatus      = rs1.getString("Estatus");
-                fadquisicion        = rs1.getString("Fecha_Aqd");
+                fadquisicion        = rs1.getString("Fecha_Adq");
             }
 
         } catch (SQLException ex) {

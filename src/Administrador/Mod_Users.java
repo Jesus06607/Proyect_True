@@ -74,7 +74,7 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 150, 90, 30);
+        jLabel3.setBounds(50, 150, 100, 30);
 
         txt_contra.setEditable(false);
         txt_contra.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +90,7 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Estatus");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(90, 190, 60, 30);
+        jLabel4.setBounds(80, 190, 70, 30);
 
         txt_status.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +105,7 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 240, 70, 30);
+        jLabel5.setBounds(60, 240, 90, 30);
 
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +120,7 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Correo");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(90, 290, 60, 30);
+        jLabel6.setBounds(80, 290, 70, 30);
 
         txt_correo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,7 +149,7 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 110, 70, 30);
+        jLabel2.setBounds(70, 110, 80, 30);
 
         txt_sexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,7 +238,6 @@ public class Mod_Users extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(txt_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -246,7 +245,8 @@ public class Mod_Users extends javax.swing.JFrame {
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton1)
                     .addComponent(btn_update)
-                    .addComponent(btnContraseña))
+                    .addComponent(btnContraseña)
+                    .addComponent(jButton4))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -274,7 +274,7 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
         jLabel8.setText("DATOS  DE USUARIOS");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(310, 10, 150, 40);
+        jLabel8.setBounds(310, 10, 180, 40);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_users.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
