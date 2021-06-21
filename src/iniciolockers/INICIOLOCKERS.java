@@ -96,7 +96,7 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 51, 0));
         jLabel4.setText("Sa.H.Lo");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(490, 10, 200, 40);
+        jLabel4.setBounds(490, 10, 130, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/login.png"))); // NOI18N
         getContentPane().add(jLabel6);
@@ -109,6 +109,7 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(380, 390, 500, 40);
 
+        jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton1.setText("Registrarse");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

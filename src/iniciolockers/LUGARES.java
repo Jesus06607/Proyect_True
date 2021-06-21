@@ -67,42 +67,42 @@ public class LUGARES extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 130, 90, 30);
+        jLabel2.setBounds(100, 130, 80, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Direccion");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 170, 100, 30);
+        jLabel3.setBounds(100, 170, 80, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Ciudad");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(100, 210, 70, 38);
+        jLabel4.setBounds(100, 210, 80, 38);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Telefono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 250, 100, 38);
+        jLabel5.setBounds(100, 250, 80, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Responsable");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 290, 130, 38);
+        jLabel6.setBounds(70, 290, 110, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Clave");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(110, 90, 50, 30);
+        jLabel7.setBounds(100, 90, 50, 30);
         getContentPane().add(txt_nombre);
         txt_nombre.setBounds(180, 130, 200, 30);
 

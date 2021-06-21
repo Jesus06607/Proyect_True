@@ -62,7 +62,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bienvenido a la administración");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(260, 10, 330, 51);
+        jLabel1.setBounds(320, 10, 280, 51);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton4.setText("Regresar");

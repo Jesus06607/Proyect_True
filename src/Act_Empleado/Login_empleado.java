@@ -54,11 +54,11 @@ public class Login_empleado extends javax.swing.JFrame {
         jLabel1.setBounds(180, 70, 100, 100);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("** INICIO DE SESION **");
+        jLabel2.setText("** Inicio de sesión **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 10, 230, 60);
+        jLabel2.setBounds(100, 10, 290, 60);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
