@@ -271,10 +271,10 @@ public class Mod_Users extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(430, 70, 300, 320);
 
-        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
-        jLabel8.setText("DATOS  DE USUARIOS");
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel8.setText("Datos de usuarios");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(310, 10, 150, 40);
+        jLabel8.setBounds(280, 10, 180, 40);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_users.jpg"))); // NOI18N
         getContentPane().add(jLabel9);

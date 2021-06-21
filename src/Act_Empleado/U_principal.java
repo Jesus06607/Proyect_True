@@ -65,21 +65,21 @@ public class U_principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setText("Lugar");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 120, 60, 32);
+        jLabel2.setBounds(150, 120, 60, 32);
         getContentPane().add(txt_Lugar);
         txt_Lugar.setBounds(210, 120, 180, 30);
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 160, 174, 33);
+        jLabel3.setBounds(60, 160, 149, 33);
         getContentPane().add(txt_cantidad);
         txt_cantidad.setBounds(210, 160, 180, 30);
 
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(134, 58, 586, 36);
+        jLabel4.setBounds(64, 58, 660, 36);
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,7 +112,7 @@ public class U_principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 212, 82, 40);
+        jButton3.setBounds(100, 212, 97, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_U_Principal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);

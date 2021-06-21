@@ -67,14 +67,15 @@ public class Cobros extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         txt_hEntrada = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
+        lbfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(830, 410));
+        setMinimumSize(new java.awt.Dimension(755, 450));
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 10, 255));
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cobros de hospedaje");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(290, 20, 210, 30);
@@ -86,57 +87,58 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 80, 80, 30);
+        jButton1.setBounds(290, 100, 80, 30);
 
         txt_clave.setEditable(false);
         getContentPane().add(txt_clave);
-        txt_clave.setBounds(200, 120, 90, 30);
+        txt_clave.setBounds(180, 140, 100, 30);
 
         txt_Entrada.setEditable(false);
         getContentPane().add(txt_Entrada);
-        txt_Entrada.setBounds(200, 160, 90, 30);
+        txt_Entrada.setBounds(180, 180, 100, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(125, 43, 109));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Clave del nombre:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 120, 180, 30);
+        jLabel3.setBounds(30, 140, 150, 30);
 
         txt_Salida.setEditable(false);
         getContentPane().add(txt_Salida);
-        txt_Salida.setBounds(200, 240, 90, 30);
+        txt_Salida.setBounds(180, 260, 100, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(125, 43, 109));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Fecha de salida:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 240, 150, 30);
+        jLabel4.setBounds(50, 260, 130, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(125, 43, 109));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Precio de Locker:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 280, 160, 30);
+        jLabel5.setBounds(40, 300, 140, 30);
 
         txt_Precio.setEditable(false);
         getContentPane().add(txt_Precio);
-        txt_Precio.setBounds(200, 280, 90, 30);
+        txt_Precio.setBounds(180, 300, 100, 30);
 
         jLabel11.setBackground(new java.awt.Color(255, 255, 255));
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(125, 43, 109));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Fecha de entrada:");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(30, 160, 160, 30);
+        jLabel11.setBounds(40, 180, 140, 30);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cobros"));
         jPanel1.setLayout(null);
 
         Tipos.add(rb_Horas);
-        rb_Horas.setForeground(new java.awt.Color(255, 110, 0));
+        rb_Horas.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        rb_Horas.setForeground(new java.awt.Color(0, 0, 0));
         rb_Horas.setText("Por horas");
         rb_Horas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +149,8 @@ public class Cobros extends javax.swing.JFrame {
         rb_Horas.setBounds(20, 30, 110, 30);
 
         Tipos.add(rb_Dias);
-        rb_Dias.setForeground(new java.awt.Color(255, 76, 0));
+        rb_Dias.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        rb_Dias.setForeground(new java.awt.Color(0, 0, 0));
         rb_Dias.setText("Por dias");
         rb_Dias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,10 +162,10 @@ public class Cobros extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(246, 1, 97));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Cantidad:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 120, 90, 30);
+        jLabel2.setBounds(30, 120, 70, 30);
 
         txt_cantidad.setText("0");
         jPanel1.add(txt_cantidad);
@@ -175,7 +178,7 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(170, 180, 70, 27);
+        jButton2.setBounds(160, 180, 80, 25);
 
         txt_Total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,57 +195,65 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(50, 150, 46, 27);
+        jButton3.setBounds(30, 150, 60, 30);
 
+        jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Hora de salida");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(20, 90, 110, 17);
+        jLabel9.setBounds(10, 80, 90, 30);
         jPanel1.add(txt_hSalida);
-        txt_hSalida.setBounds(120, 80, 80, 34);
+        txt_hSalida.setBounds(100, 80, 80, 30);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(460, 180, 250, 210);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel2.setLayout(null);
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(12, 6, 98));
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Costos de lockers");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(40, 10, 140, 30);
+        jLabel6.setBounds(30, 10, 140, 30);
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(2, 17, 154));
-        jLabel7.setText("Por  hora: $80.00");
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Por hora: $80.00");
         jPanel2.add(jLabel7);
         jLabel7.setBounds(30, 40, 140, 30);
 
-        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 15)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(9, 8, 131));
-        jLabel8.setText("Por dia:    $1200.00");
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Por dia: $1200.00");
         jPanel2.add(jLabel8);
         jLabel8.setBounds(30, 70, 160, 30);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(470, 60, 220, 110);
         getContentPane().add(txt_Buscar);
-        txt_Buscar.setBounds(200, 80, 90, 34);
+        txt_Buscar.setBounds(180, 100, 100, 30);
 
-        jLabel10.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 0, 168));
+        jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Hora de Entrada:");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(60, 200, 130, 30);
+        jLabel10.setBounds(40, 220, 140, 30);
         getContentPane().add(txt_hEntrada);
-        txt_hEntrada.setBounds(200, 200, 90, 34);
+        txt_hEntrada.setBounds(180, 220, 100, 30);
 
+        jLabel12.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Ingrese la clave:");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(80, 80, 120, 30);
+        jLabel12.setBounds(50, 100, 130, 30);
+
+        lbfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_hospedaje.jpg"))); // NOI18N
+        getContentPane().add(lbfondo);
+        lbfondo.setBounds(0, 0, 780, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -408,6 +419,7 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbfondo;
     private javax.swing.JRadioButton rb_Dias;
     private javax.swing.JRadioButton rb_Horas;
     private javax.swing.JTextField txt_Buscar;

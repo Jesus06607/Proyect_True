@@ -68,9 +68,9 @@ public class Mod_Lugares extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("INGRESE LOS DATOS SOLICITADOS");
+        jLabel1.setText("Ingrese los datos solicitados\n");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(140, 10, 280, 47);
+        jLabel1.setBounds(160, 10, 240, 47);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N

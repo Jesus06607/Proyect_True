@@ -53,11 +53,11 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel1.setBounds(210, 80, 100, 100);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("** INICIO DE SESION **");
+        jLabel2.setText("** Inicio de sesión **");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(154, 40, 226, 42);
+        jLabel2.setBounds(120, 40, 290, 42);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
