@@ -56,11 +56,16 @@ public class Cobros extends javax.swing.JFrame {
         txt_cantidad = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         txt_Total = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        txt_hSalida = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txt_Buscar = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        txt_hEntrada = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(830, 410));
@@ -99,25 +104,25 @@ public class Cobros extends javax.swing.JFrame {
 
         txt_Salida.setEditable(false);
         getContentPane().add(txt_Salida);
-        txt_Salida.setBounds(200, 200, 90, 30);
+        txt_Salida.setBounds(200, 240, 90, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(125, 43, 109));
         jLabel4.setText("Fecha de salida:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 200, 150, 30);
+        jLabel4.setBounds(50, 240, 150, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(125, 43, 109));
         jLabel5.setText("Precio de Locker:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 240, 160, 30);
+        jLabel5.setBounds(40, 280, 160, 30);
 
         txt_Precio.setEditable(false);
         getContentPane().add(txt_Precio);
-        txt_Precio.setBounds(200, 240, 90, 30);
+        txt_Precio.setBounds(200, 280, 90, 30);
 
         jLabel11.setBackground(new java.awt.Color(255, 255, 255));
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -156,20 +161,20 @@ public class Cobros extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(246, 1, 97));
         jLabel2.setText("Cantidad:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(20, 70, 90, 30);
+        jLabel2.setBounds(20, 120, 90, 30);
 
         txt_cantidad.setText("0");
         jPanel1.add(txt_cantidad);
-        txt_cantidad.setBounds(90, 70, 90, 30);
+        txt_cantidad.setBounds(100, 120, 90, 30);
 
-        jButton2.setText("Total:");
+        jButton2.setText("Guardar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(20, 110, 70, 27);
+        jButton2.setBounds(170, 180, 70, 27);
 
         txt_Total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,10 +182,25 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_Total);
-        txt_Total.setBounds(90, 110, 90, 30);
+        txt_Total.setBounds(100, 150, 90, 30);
+
+        jButton3.setText("Total");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(50, 150, 46, 27);
+
+        jLabel9.setText("Hora de salida");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(20, 90, 110, 17);
+        jPanel1.add(txt_hSalida);
+        txt_hSalida.setBounds(130, 80, 80, 34);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(460, 180, 250, 150);
+        jPanel1.setBounds(460, 180, 250, 210);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 0, 0))); // NOI18N
         jPanel2.setLayout(null);
@@ -211,14 +231,22 @@ public class Cobros extends javax.swing.JFrame {
         getContentPane().add(txt_Buscar);
         txt_Buscar.setBounds(200, 80, 90, 34);
 
+        jLabel10.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 0, 168));
+        jLabel10.setText("Hora de Entrada:");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(60, 200, 130, 30);
+        getContentPane().add(txt_hEntrada);
+        txt_hEntrada.setBounds(200, 200, 90, 34);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          int contador=0;
-        String clave="", entrada="", salida="", precio="";
+        String clave="", entrada="", salida="", precio="", tiempo="";
         
-                ResultSet rs1 = Controllers.mostrardatos(" Reservacion ", " Clave_turist, F_Entrada, F_Salida, P_Locker ", " Clave_turist = '"+txt_Buscar.getText()+"'" );
+                ResultSet rs1 = Controllers.mostrardatos(" Reservacion ", " Clave_turist, F_Entrada, F_Salida, P_Locker, Tiempo ", " Clave_turist = '"+txt_Buscar.getText()+"'" );
                     try{
                while(rs1.next()){
                    contador++;
@@ -226,6 +254,7 @@ public class Cobros extends javax.swing.JFrame {
                    entrada     = rs1.getString("F_Entrada");
                    salida       = rs1.getString("F_Salida");
                    precio       = rs1.getString("P_Locker");
+                   tiempo      =rs1.getString("Tiempo");
                }
          
          } catch (SQLException ex) {
@@ -237,6 +266,7 @@ public class Cobros extends javax.swing.JFrame {
              txt_Entrada.setText(entrada);
              txt_Salida.setText(salida);
              txt_Precio.setText(precio);
+             txt_hEntrada.setText(tiempo);
          }
         else{
             System.out.println("No hay");
@@ -245,12 +275,12 @@ public class Cobros extends javax.swing.JFrame {
 
     private void rb_HorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_HorasActionPerformed
 
-        
+        Renta= "Pago por horas";
         
     }//GEN-LAST:event_rb_HorasActionPerformed
 
     private void rb_DiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_DiasActionPerformed
-        // TODO add your handling code here:
+            Renta= "Pago por dias";    
     }//GEN-LAST:event_rb_DiasActionPerformed
 
     private void txt_TotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_TotalActionPerformed
@@ -258,7 +288,40 @@ public class Cobros extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_TotalActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+     String cadena1, cadena2, cadena3, cadena4, cadena5, cadena6, cadena7, cadena8, cadena9;
 
+        cadena1 = txt_clave.getText();
+        cadena2 = txt_Entrada.getText();
+        cadena3 = txt_hEntrada.getText();
+        cadena4 = txt_Salida.getText();
+        cadena5 = txt_Precio.getText();
+        cadena6 = txt_hSalida.getText();
+        cadena7 = txt_cantidad.getText();
+        cadena8 = Renta.concat("");
+        cadena9 = txt_Total.getText();
+        
+        if (txt_clave.getText().equals("")
+            || (txt_Entrada.getText().equals("")
+                || (txt_hEntrada.getText().equals(""))
+                || (txt_Salida.getText().equals(""))
+                || (txt_Precio.getText().equals(""))
+                || (txt_hSalida.getText().equals(""))
+                || (txt_cantidad.getText().equals("")
+                ))) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Debe llenar todos los campos \n", "AVISO!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            txt_clave.requestFocus();
+        } else if (Controllers.addData(" Cobros ", " Cl_turista, F_entrada, H_entrada, F_Salida, Precio, H_salida, Cantidad, T_cobro, Pago", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "', '" + cadena8 + "', '" + cadena9 + "'")) {
+                System.out.println("Datos almacenados");
+        }
+        
+        
+        //Apartado de operaciones:
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String n1 =txt_Precio.getText();
         String n2 =txt_cantidad.getText();
         
@@ -270,9 +333,9 @@ public class Cobros extends javax.swing.JFrame {
         int b = Integer.parseInt(n2);
         int r = c*b;
         r= r+a;
-         txt_Total.setText("Su total es: "+r);
+         txt_Total.setText(""+r);
         
-         JOptionPane.showMessageDialog(null, "Su total a pagar es: "+r);
+         JOptionPane.showMessageDialog(null, ""+r);
         }else 
             if(rb_Dias.isSelected()){
                 int c=1200;
@@ -280,12 +343,11 @@ public class Cobros extends javax.swing.JFrame {
                 int b = Integer.parseInt(n2);
                 int r = c*b;
                 r= r+a;
-                 txt_Total.setText("Su total es: "+r);
+                 txt_Total.setText(""+r);
         
-         JOptionPane.showMessageDialog(null, "Su total a pagar es: "+r);
+         JOptionPane.showMessageDialog(null, "Su total a pagar es:"+r);
         }
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,7 +388,9 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.ButtonGroup Tipos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -335,6 +399,7 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton rb_Dias;
@@ -346,5 +411,8 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.JTextField txt_Total;
     private javax.swing.JTextField txt_cantidad;
     private javax.swing.JTextField txt_clave;
+    private javax.swing.JTextField txt_hEntrada;
+    private javax.swing.JTextField txt_hSalida;
     // End of variables declaration//GEN-END:variables
+private String Renta;
 }
