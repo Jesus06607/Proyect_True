@@ -79,11 +79,7 @@ public class U_principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");
         getContentPane().add(jLabel4);
-<<<<<<< HEAD
-        jLabel4.setBounds(90, 60, 586, 36);
-=======
         jLabel4.setBounds(64, 58, 660, 36);
->>>>>>> 6b05de3da04c665f3ba59ce4d67f224c83c86ce3
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

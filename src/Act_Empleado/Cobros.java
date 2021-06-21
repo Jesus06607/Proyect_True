@@ -165,11 +165,7 @@ public class Cobros extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Cantidad:");
         jPanel1.add(jLabel2);
-<<<<<<< HEAD
-        jLabel2.setBounds(50, 120, 80, 30);
-=======
         jLabel2.setBounds(30, 120, 70, 30);
->>>>>>> 6b05de3da04c665f3ba59ce4d67f224c83c86ce3
 
         txt_cantidad.setText("0");
         jPanel1.add(txt_cantidad);
@@ -201,13 +197,6 @@ public class Cobros extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(30, 150, 60, 30);
 
-<<<<<<< HEAD
-        jLabel9.setText("Hora de salida:");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(10, 90, 110, 20);
-        jPanel1.add(txt_hSalida);
-        txt_hSalida.setBounds(120, 80, 90, 34);
-=======
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Hora de salida");
@@ -215,7 +204,6 @@ public class Cobros extends javax.swing.JFrame {
         jLabel9.setBounds(10, 80, 90, 30);
         jPanel1.add(txt_hSalida);
         txt_hSalida.setBounds(100, 80, 80, 30);
->>>>>>> 6b05de3da04c665f3ba59ce4d67f224c83c86ce3
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(460, 180, 260, 220);
