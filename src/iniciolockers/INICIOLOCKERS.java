@@ -35,7 +35,6 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btn2 = new javax.swing.JButton();
@@ -57,13 +56,6 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(880, 550));
         getContentPane().setLayout(null);
-
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Felipe de Jesús Zamora Baldazo & Jesús Martín Hernandez Hernandez");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(0, 480, 540, 20);
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +82,7 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 51, 0));
         jLabel3.setText("Créditos: Jesús Martín Hernández Hernández & ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 410, 360, 50);
+        jLabel3.setBounds(10, 410, 360, 50);
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 0));
@@ -130,11 +122,11 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(0, 51, 0));
         jLabel10.setText("Felipe de Jesús Zamora Baldazo");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(60, 440, 250, 40);
+        jLabel10.setBounds(80, 440, 270, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 890, 490);
+        jLabel1.setBounds(0, 0, 890, 510);
 
         jMenu1.setText("Sesion Personal");
 
@@ -243,7 +235,6 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;

@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import tables_datas.data_table;
 
@@ -25,6 +26,9 @@ public class client extends javax.swing.JFrame {
      */
     public client() {
         initComponents();
+        this.setTitle("Sa.H.Lo");
+        this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
+        this.setResizable(false);
         Lugares();
         Lockers();
         Empleado();
@@ -76,37 +80,46 @@ public class client extends javax.swing.JFrame {
         txt_clave = new javax.swing.JTextField();
         txt_lugar = new javax.swing.JTextField();
         txt_locker = new javax.swing.JTextField();
+        lbfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Lugar:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(150, 130, 80, 40);
+        jLabel1.setBounds(140, 140, 50, 30);
 
-        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Locker:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 180, 90, 30);
+        jLabel2.setBounds(140, 180, 60, 30);
 
-        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ingrese su clave:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(70, 100, 130, 30);
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setText("Fecha de entrada:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(360, 110, 150, 30);
+        jLabel4.setBounds(340, 100, 140, 30);
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setText("Fecha de salida:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(380, 150, 150, 30);
+        jLabel5.setBounds(350, 140, 130, 30);
 
+        btn_Reservar.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         btn_Reservar.setText("Reservar");
         btn_Reservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,26 +127,30 @@ public class client extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Reservar);
-        btn_Reservar.setBounds(660, 110, 100, 40);
+        btn_Reservar.setBounds(660, 90, 100, 40);
         getContentPane().add(txt_empleado);
-        txt_empleado.setBounds(200, 220, 120, 34);
+        txt_empleado.setBounds(200, 220, 130, 30);
         getContentPane().add(txt_entrada);
-        txt_entrada.setBounds(500, 110, 110, 34);
+        txt_entrada.setBounds(480, 100, 110, 30);
         getContentPane().add(txt_salida);
-        txt_salida.setBounds(500, 150, 110, 34);
+        txt_salida.setBounds(480, 140, 110, 30);
         getContentPane().add(txt_precio);
-        txt_precio.setBounds(500, 190, 110, 34);
+        txt_precio.setBounds(480, 180, 110, 30);
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setText("Precio de locker: ");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(370, 190, 150, 30);
+        jLabel6.setBounds(350, 180, 130, 30);
 
-        jLabel7.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Seleccione el empleado:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(20, 220, 200, 30);
+        jLabel7.setBounds(20, 220, 180, 30);
 
+        jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,8 +158,9 @@ public class client extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(660, 150, 100, 40);
+        jButton2.setBounds(660, 140, 100, 40);
 
+        jButton3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton3.setText("Salir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,19 +170,20 @@ public class client extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(660, 190, 100, 30);
 
-        jLabel8.setFont(new java.awt.Font("Ubuntu", 1, 22)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel8.setText("Reservaciones de lockers");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(260, 10, 280, 40);
+        jLabel8.setBounds(260, 10, 250, 40);
 
-        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel9.setText("Realize su reservacion:");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(20, 60, 240, 30);
 
+        Lb1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         Lb1.setText("Catalogo de lugares ");
         getContentPane().add(Lb1);
-        Lb1.setBounds(30, 300, 160, 17);
+        Lb1.setBounds(50, 300, 160, 20);
 
         tb1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -179,9 +198,10 @@ public class client extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 320, 250, 110);
 
-        Lb2.setText("Catalogo  de lockers");
+        Lb2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        Lb2.setText("Catalogo de lockers");
         getContentPane().add(Lb2);
-        Lb2.setBounds(370, 300, 150, 20);
+        Lb2.setBounds(370, 300, 160, 20);
 
         tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -196,6 +216,7 @@ public class client extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(290, 320, 300, 110);
 
+        TG1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         TG1.setText("Ver  menu de informacion:");
         TG1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,7 +224,7 @@ public class client extends javax.swing.JFrame {
             }
         });
         getContentPane().add(TG1);
-        TG1.setBounds(330, 250, 210, 40);
+        TG1.setBounds(340, 250, 240, 40);
 
         tb3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -220,15 +241,20 @@ public class client extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(610, 320, 180, 110);
 
+        Lb3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         Lb3.setText("Catalogo de empleados");
         getContentPane().add(Lb3);
-        Lb3.setBounds(610, 300, 190, 17);
+        Lb3.setBounds(610, 300, 180, 21);
         getContentPane().add(txt_clave);
-        txt_clave.setBounds(200, 100, 120, 34);
+        txt_clave.setBounds(200, 100, 130, 30);
         getContentPane().add(txt_lugar);
-        txt_lugar.setBounds(200, 140, 120, 34);
+        txt_lugar.setBounds(200, 140, 130, 30);
         getContentPane().add(txt_locker);
-        txt_locker.setBounds(200, 180, 120, 34);
+        txt_locker.setBounds(200, 180, 130, 30);
+
+        lbfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_client.jpg"))); // NOI18N
+        getContentPane().add(lbfondo);
+        lbfondo.setBounds(0, 0, 880, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -436,6 +462,7 @@ public class client extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lbfondo;
     private javax.swing.JTable tb1;
     private javax.swing.JTable tb2;
     private javax.swing.JTable tb3;

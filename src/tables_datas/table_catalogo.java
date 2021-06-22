@@ -67,6 +67,7 @@ public class table_catalogo extends javax.swing.JFrame {
         table_catalogo = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
@@ -85,7 +86,9 @@ public class table_catalogo extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(20, 50, 460, 260);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Catálogo de lockers");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(50, 0, 400, 50);
@@ -98,6 +101,10 @@ public class table_catalogo extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(200, 330, 120, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_data_table.jpg"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 510, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -147,6 +154,7 @@ public class table_catalogo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_catalogo;
     // End of variables declaration//GEN-END:variables

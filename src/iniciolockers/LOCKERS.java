@@ -61,7 +61,7 @@ public class LOCKERS extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(370, 370));
+        setMinimumSize(new java.awt.Dimension(350, 350));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -74,7 +74,7 @@ public class LOCKERS extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Clave");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 50, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 50, 30));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -166,9 +166,12 @@ public class LOCKERS extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 130, 40));
 
-        jLabel11.setText("Contraseña:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 90, 30));
-        getContentPane().add(txt_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 110, -1));
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Contraseña");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 100, 30));
+        getContentPane().add(txt_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 110, 30));
 
         btnContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/contraseña_1.png"))); // NOI18N
         btnContraseña.setText("Generar contraseña");
@@ -180,7 +183,7 @@ public class LOCKERS extends javax.swing.JFrame {
         getContentPane().add(btnContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 490));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

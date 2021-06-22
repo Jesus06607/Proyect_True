@@ -79,6 +79,7 @@ public class Table_turistas extends javax.swing.JFrame {
         table_turista = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lbfondo_turistas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 400));
@@ -109,7 +110,11 @@ public class Table_turistas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(500, 300, 120, 40);
+        jButton1.setBounds(450, 300, 120, 40);
+
+        lbfondo_turistas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_table_turistas.jpg"))); // NOI18N
+        getContentPane().add(lbfondo_turistas);
+        lbfondo_turistas.setBounds(20, 0, 960, 360);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -160,6 +165,7 @@ public class Table_turistas extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbfondo_turistas;
     private javax.swing.JTable table_turista;
     // End of variables declaration//GEN-END:variables
 }

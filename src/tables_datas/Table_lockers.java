@@ -77,6 +77,7 @@ public class Table_lockers extends javax.swing.JFrame {
         table_locker = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lbfondo_lockers = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 400));
@@ -93,12 +94,14 @@ public class Table_lockers extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_locker);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 70, 1010, 210);
+        jScrollPane1.setBounds(20, 70, 930, 210);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Lockers");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(420, 0, 160, 70);
+        jLabel1.setBounds(360, 0, 160, 70);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -108,6 +111,10 @@ public class Table_lockers extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(460, 330, 120, 40);
+
+        lbfondo_lockers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_table_lockers.jpg"))); // NOI18N
+        getContentPane().add(lbfondo_lockers);
+        lbfondo_lockers.setBounds(0, 0, 960, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -158,6 +165,7 @@ public class Table_lockers extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbfondo_lockers;
     private javax.swing.JTable table_locker;
     // End of variables declaration//GEN-END:variables
 }

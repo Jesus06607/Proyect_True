@@ -77,6 +77,7 @@ public class Table_Lugares extends javax.swing.JFrame {
         table_lugares = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lbfondo_tablelugares = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 400));
@@ -93,12 +94,14 @@ public class Table_Lugares extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_lugares);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 70, 940, 240);
+        jScrollPane1.setBounds(10, 70, 940, 240);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Lugares");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(450, 0, 230, 70);
+        jLabel1.setBounds(360, 0, 180, 70);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +110,11 @@ public class Table_Lugares extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(550, 340, 120, 40);
+        jButton1.setBounds(430, 340, 120, 40);
+
+        lbfondo_tablelugares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_table_lugares.jpg"))); // NOI18N
+        getContentPane().add(lbfondo_tablelugares);
+        lbfondo_tablelugares.setBounds(0, 0, 960, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -158,6 +165,7 @@ public class Table_Lugares extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbfondo_tablelugares;
     private javax.swing.JTable table_lugares;
     // End of variables declaration//GEN-END:variables
 }

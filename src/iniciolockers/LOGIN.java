@@ -71,7 +71,7 @@ public class LOGIN extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Contraseña");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 260, 110, 33);
+        jLabel4.setBounds(60, 260, 110, 30);
 
         text_usuario.setToolTipText("");
         text_usuario.setName(""); // NOI18N

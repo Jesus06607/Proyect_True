@@ -77,6 +77,7 @@ public class data_table extends javax.swing.JFrame {
         table_date = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        lbfondo_data = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -92,12 +93,14 @@ public class data_table extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_date);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(22, 66, 947, 213);
+        jScrollPane1.setBounds(10, 60, 947, 213);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Usuario");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(371, 0, 159, 48);
+        jLabel1.setBounds(371, 0, 159, 60);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +110,10 @@ public class data_table extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(480, 290, 120, 40);
+
+        lbfondo_data.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_data_table.jpg"))); // NOI18N
+        getContentPane().add(lbfondo_data);
+        lbfondo_data.setBounds(0, 0, 970, 340);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -158,6 +165,7 @@ public class data_table extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbfondo_data;
     private javax.swing.JTable table_date;
     // End of variables declaration//GEN-END:variables
 }

@@ -180,11 +180,12 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().add(txt_nombre);
         txt_nombre.setBounds(150, 110, 227, 30);
 
-        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Inserte lo correspondiente al usuario");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(220, 10, 340, 40);
+        jLabel8.setBounds(190, 10, 370, 40);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/back.png"))); // NOI18N
         jButton2.setText("Atras");

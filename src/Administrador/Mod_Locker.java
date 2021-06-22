@@ -80,53 +80,53 @@ public class Mod_Locker extends javax.swing.JFrame {
         jLabel1.setBounds(360, 10, 340, 50);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Clave");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(150, 100, 60, 20);
+        jLabel2.setBounds(150, 97, 60, 23);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(140, 140, 70, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Precio");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(140, 180, 70, 20);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Capacidad");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(120, 220, 90, 20);
+        jLabel5.setBounds(110, 220, 100, 20);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Color");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(150, 260, 60, 20);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Fecha de Adquisicion");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 340, 160, 20);
+        jLabel7.setBounds(30, 340, 180, 20);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Estatus");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(140, 300, 70, 20);
+        jLabel8.setBounds(130, 300, 80, 20);
         getContentPane().add(txt_fadquisicion);
         txt_fadquisicion.setBounds(209, 335, 140, 30);
         getContentPane().add(txt_clave);
@@ -232,15 +232,18 @@ public class Mod_Locker extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(480, 90, 290, 340);
 
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Contraseña");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(120, 370, 90, 30);
+        jLabel10.setBounds(100, 370, 110, 30);
         getContentPane().add(txt_contra);
-        txt_contra.setBounds(210, 370, 140, 34);
+        txt_contra.setBounds(210, 370, 140, 30);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_locker.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(-10, 0, 890, 480);
+        jLabel9.setBounds(0, 0, 890, 480);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

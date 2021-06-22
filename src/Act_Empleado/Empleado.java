@@ -58,7 +58,7 @@ public class Empleado extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(200, 200));
+        setMinimumSize(new java.awt.Dimension(400, 340));
         getContentPane().setLayout(null);
 
         jButton1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
@@ -72,14 +72,16 @@ public class Empleado extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(130, 110, 160, 36);
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menú  del  empleado");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(120, 10, 180, 54);
+        jLabel1.setBounds(120, 0, 180, 54);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_menuempleado.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-110, -10, 740, 490);
+        jLabel2.setBounds(0, 0, 410, 410);
 
         jMenu1.setText("Agregar");
 

@@ -58,7 +58,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bienvenido a la administración");
         getContentPane().add(jLabel1);

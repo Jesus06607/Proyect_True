@@ -72,7 +72,7 @@ public class U_principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 160, 174, 33);
+        jLabel3.setBounds(60, 160, 149, 30);
         getContentPane().add(txt_cantidad);
         txt_cantidad.setBounds(210, 160, 140, 30);
 
@@ -112,7 +112,7 @@ public class U_principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 212, 82, 40);
+        jButton3.setBounds(100, 212, 97, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_U_Principal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
