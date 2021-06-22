@@ -5,6 +5,8 @@
  */
 package tables_datas;
 
+import Act_Empleado.Empleado;
+import Administrador.Principal;
 import SQL.Controllers;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -74,8 +76,10 @@ public class Table_Lugares extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         table_lugares = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1000, 400));
         getContentPane().setLayout(null);
 
         table_lugares.setModel(new javax.swing.table.DefaultTableModel(
@@ -89,15 +93,31 @@ public class Table_Lugares extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_lugares);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 70, 980, 403);
+        jScrollPane1.setBounds(20, 70, 940, 240);
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
         jLabel1.setText("Lugares");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(370, 0, 170, 70);
+        jLabel1.setBounds(450, 0, 230, 70);
+
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(550, 340, 120, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        Principal frm= new Principal();
+        frm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +155,7 @@ public class Table_Lugares extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_lugares;

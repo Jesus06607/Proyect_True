@@ -190,7 +190,7 @@ public class Register_users extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, "Debe llenar todos los campos \n", "AVISO!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             txt_nombre.requestFocus();
         } else if (Controllers.addData(" Turistas ", " clave, Nombre, Telefono, Direccion, Edad, Nacionalidad, Sexo ", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "' ")) {
-            javax.swing.JOptionPane.showMessageDialog(this, "Se guardo correctamente \n", "FELICIDADES!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            javax.swing.JOptionPane.showMessageDialog(this, "Guarde su reservacion \n", "FELICIDADES!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         }
         //Esto sirve para que despues de ingresar los datos se pongan vacios
         this.txt_clave.setText("");
@@ -200,6 +200,11 @@ public class Register_users extends javax.swing.JFrame {
         this.txt_edad.setText("");
         this.txt_nacion.setText("");
         this.txt_sexo.setText("");
+        
+        
+        client frm= new client();
+        frm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -6,6 +6,7 @@
 package Act_Empleado;
 
 import SQL.Controllers;
+import iniciolockers.INICIOLOCKERS;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -59,6 +60,7 @@ public class Cobros extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         txt_hSalida = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -178,7 +180,7 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(160, 180, 80, 25);
+        jButton2.setBounds(20, 190, 80, 27);
 
         txt_Total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +188,7 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_Total);
-        txt_Total.setBounds(100, 150, 90, 30);
+        txt_Total.setBounds(120, 150, 90, 30);
 
         jButton3.setText("Total");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -195,20 +197,29 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(30, 150, 60, 30);
+        jButton3.setBounds(40, 150, 60, 30);
 
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Hora de salida");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(10, 80, 90, 30);
+        jLabel9.setBounds(10, 90, 90, 30);
         jPanel1.add(txt_hSalida);
-        txt_hSalida.setBounds(100, 80, 80, 30);
+        txt_hSalida.setBounds(120, 90, 100, 30);
+
+        jButton4.setText("Salir");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(110, 190, 90, 27);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(460, 180, 260, 220);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel2.setLayout(null);
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
@@ -365,6 +376,13 @@ public class Cobros extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        
+        Empleado frm= new Empleado();
+        frm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -405,6 +423,7 @@ public class Cobros extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

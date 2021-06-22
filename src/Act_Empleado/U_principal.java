@@ -72,14 +72,14 @@ public class U_principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de lockers");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 160, 149, 33);
+        jLabel3.setBounds(30, 160, 174, 33);
         getContentPane().add(txt_cantidad);
         txt_cantidad.setBounds(210, 160, 140, 30);
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel4.setText("Inserte el lugar guardado para asignarle una cantidad de lockers   ");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(64, 58, 660, 36);
+        jLabel4.setBounds(10, 60, 780, 36);
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,7 +112,7 @@ public class U_principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(100, 212, 97, 40);
+        jButton3.setBounds(100, 212, 82, 40);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_U_Principal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
@@ -164,7 +164,7 @@ public class U_principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        LOGIN frm= new LOGIN();
+        Empleado frm= new Empleado();
         frm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

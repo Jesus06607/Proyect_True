@@ -8,6 +8,7 @@ package Administrador;
 import SQL.Controllers;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -62,6 +63,9 @@ public class Mod_Locker extends javax.swing.JFrame {
         btn_buscar = new javax.swing.JButton();
         txt_Buscar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        btnContraseña = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        txt_contra = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -186,7 +190,7 @@ public class Mod_Locker extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 140, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 140, 40));
 
         btn_update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/recarga.png"))); // NOI18N
         btn_update.setText("Actualizar");
@@ -216,8 +220,23 @@ public class Mod_Locker extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 170, 40));
 
+        btnContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/contraseña_1.png"))); // NOI18N
+        btnContraseña.setText("Generar contraseña");
+        btnContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContraseñaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
+
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(480, 90, 290, 320);
+        jPanel1.setBounds(480, 90, 290, 340);
+
+        jLabel10.setText("Contraseña");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(120, 370, 90, 30);
+        getContentPane().add(txt_contra);
+        txt_contra.setBounds(210, 370, 140, 34);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_mod_locker.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
@@ -292,9 +311,9 @@ public class Mod_Locker extends javax.swing.JFrame {
         
           //Apartamos un contador para ver si hay resultados
         int contador=0;
-        String clave="", nombre="", precio="", capacidad="", color="", estatus="", fadquisicion="";
+        String clave="", nombre="", precio="", capacidad="", color="", estatus="", fadquisicion="", contraseña="";
         //A partir de aquí, después de introducir el código, checamos la existencia en la base de datos con el controller.
-        ResultSet rs1 = Controllers.mostrardatos(" Lokers ", " clave, Nombre, Precio, Capacidad, Color, Estatus, Fecha_Adq ", " clave = '"+txt_Buscar.getText()+"'" );
+        ResultSet rs1 = Controllers.mostrardatos(" Lokers ", " clave, Nombre, Precio, Capacidad, Color, Estatus, Fecha_Adq, Contraseña  ", " clave = '"+txt_Buscar.getText()+"'" );
         try {
             while(rs1.next()){
                 contador++;
@@ -305,6 +324,7 @@ public class Mod_Locker extends javax.swing.JFrame {
                 color    = rs1.getString("Color");
                 estatus      = rs1.getString("Estatus");
                 fadquisicion        = rs1.getString("Fecha_Adq");
+                contraseña = rs1.getString("Contraseña");
             }
 
         } catch (SQLException ex) {
@@ -318,6 +338,7 @@ public class Mod_Locker extends javax.swing.JFrame {
             txt_color.setText(color);
             txt_estatus.setText(estatus);
             txt_fadquisicion.setText(fadquisicion);
+            txt_contra.setText(contraseña);
         }else{
             System.out.println("No hay");
             JOptionPane.showMessageDialog(null, "No se encontro");
@@ -326,7 +347,7 @@ public class Mod_Locker extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_buscarActionPerformed
 
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
-       if(Controllers.updateData("Lokers", " clave='" +txt_clave.getText()+ "', Nombre='"+txt_nombre.getText()+"', Precio='"+txt_precio.getText()+"', Capacidad='"+txt_capacidad.getText()+"', Color='"+txt_color.getText()+"', Estatus='"+txt_estatus.getText()+"', Fecha_Adq='"+txt_fadquisicion.getText()+"'", "clave='"+txt_clave.getText()+"'")){
+       if(Controllers.updateData("Lokers", " clave='" +txt_clave.getText()+ "', Nombre='"+txt_nombre.getText()+"', Precio='"+txt_precio.getText()+"', Capacidad='"+txt_capacidad.getText()+"', Color='"+txt_color.getText()+"', Estatus='"+txt_estatus.getText()+"', Fecha_Adq='"+txt_fadquisicion.getText()+"', Contraseña='"+txt_contra.getText()+"'", "clave='"+txt_clave.getText()+"'")){
             JOptionPane.showMessageDialog(null, "Datos Actualizados");
         }else{
             JOptionPane.showMessageDialog(null, "Error en la Actualizacion");
@@ -339,6 +360,13 @@ public class Mod_Locker extends javax.swing.JFrame {
             frm.setVisible(true);
             this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContraseñaActionPerformed
+        // generar contraseña alfanumerica
+        String clave =  UUID.randomUUID().toString().toUpperCase().substring(0,5);
+        //Reflejar la clave en la etiqueta
+        txt_contra.setText(clave);
+    }//GEN-LAST:event_btnContraseñaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -376,12 +404,14 @@ public class Mod_Locker extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnContraseña;
     private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_guardar;
     private javax.swing.JButton btn_update;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -395,6 +425,7 @@ public class Mod_Locker extends javax.swing.JFrame {
     private javax.swing.JTextField txt_capacidad;
     private javax.swing.JTextField txt_clave;
     private javax.swing.JTextField txt_color;
+    private javax.swing.JTextField txt_contra;
     private javax.swing.JTextField txt_estatus;
     private javax.swing.JTextField txt_fadquisicion;
     private javax.swing.JTextField txt_nombre;

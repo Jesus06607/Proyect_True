@@ -6,6 +6,7 @@
 package Users;
 
 import SQL.Controllers;
+import iniciolockers.INICIOLOCKERS;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -34,8 +35,7 @@ public class client extends javax.swing.JFrame {
         Lb1.setVisible(false);
         Lb2.setVisible(false);
         Lb3.setVisible(false);
-                
-                
+
     }
 
     /**
@@ -233,47 +233,44 @@ public class client extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    void Lugares(){
-              //Tabla de datos
+    void Lugares() {
+        //Tabla de datos
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("clave");
         modelo.addColumn("Nombre");
         tb1.setModel(modelo);
-        
+
         String[] datos = new String[2];
-        
+
         ResultSet rs2 = Controllers.mostrardatos("Lugares", "clave, Nombre", "1=1");
         try {
-            
+
             while (rs2.next()) {
                 datos[0] = rs2.getString("clave");
                 datos[1] = rs2.getString("Nombre");
                 modelo.addRow(datos);
             }
             tb1.setModel(modelo);
-            
-        } 
-        catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(data_table.class.getName()).log(Level.SEVERE, null, ex);
-        }    
+        }
     }
-    
-    
-    void Lockers(){
-          //Tabla de datos
+
+    void Lockers() {
+        //Tabla de datos
         DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("clave");
         modelo.addColumn("Nombre");
         modelo.addColumn("Precio");
         modelo.addColumn("Capacidad");
         tb2.setModel(modelo);
-        
+
         String[] datos = new String[4];
-    
+
         ResultSet rs2 = Controllers.mostrardatos("Lokers", "clave, Nombre, Precio, Capacidad", "1=1");
         try {
-            
+
             while (rs2.next()) {
                 datos[0] = rs2.getString("clave");
                 datos[1] = rs2.getString("Nombre");
@@ -282,38 +279,36 @@ public class client extends javax.swing.JFrame {
                 modelo.addRow(datos);
             }
             tb2.setModel(modelo);
-            
-        } 
-        catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(data_table.class.getName()).log(Level.SEVERE, null, ex);
-        }    
+        }
     }
-    
-    void Empleado(){
-      DefaultTableModel modelo = new DefaultTableModel();
+
+    void Empleado() {
+        DefaultTableModel modelo = new DefaultTableModel();
         modelo.addColumn("clave");
         modelo.addColumn("Nombre");
         tb3.setModel(modelo);
-        
+
         String[] datos = new String[2];
-        
+
         ResultSet rs2 = Controllers.mostrardatos("Usuarios", "clave, Nombre", "1=1");
         try {
-            
+
             while (rs2.next()) {
                 datos[0] = rs2.getString("clave");
                 datos[1] = rs2.getString("Nombre");
                 modelo.addRow(datos);
             }
             tb3.setModel(modelo);
-            
-        } 
-        catch (SQLException ex) {
+
+        } catch (SQLException ex) {
             Logger.getLogger(data_table.class.getName()).log(Level.SEVERE, null, ex);
-        }    
-    
+        }
+
     }
-    
+
     private void TG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TG1ActionPerformed
 
         if (TG1.isSelected()) {
@@ -335,7 +330,7 @@ public class client extends javax.swing.JFrame {
 
     private void btn_ReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ReservarActionPerformed
         String cadena1, cadena2, cadena3, cadena4, cadena5, cadena6, cadena7;
-        
+
         cadena1 = txt_clave.getText();
         cadena2 = txt_lugar.getText();
         cadena3 = txt_locker.getText();
@@ -343,10 +338,9 @@ public class client extends javax.swing.JFrame {
         cadena5 = txt_entrada.getText();
         cadena6 = txt_salida.getText();
         cadena7 = txt_precio.getText();
-        
-        
+
         if (txt_clave.getText().equals("")
-            || (txt_lugar.getText().equals("")
+                || (txt_lugar.getText().equals("")
                 || (txt_locker.getText().equals(""))
                 || (txt_empleado.getText().equals(""))
                 || (txt_entrada.getText().equals(""))
@@ -357,7 +351,7 @@ public class client extends javax.swing.JFrame {
         } else if (Controllers.addData(" Reservacion ", " Clave_turist, Clave_lugar, Clave_locker, Clave_Users, F_Entrada, F_Salida, P_Locker", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "' ")) {
             javax.swing.JOptionPane.showMessageDialog(this, "Su reservacion esta lista \n", "FELICIDADES!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         }
-       
+
         this.txt_clave.setText("");
         this.txt_lugar.setText("");
         this.txt_locker.setText("");
@@ -365,15 +359,26 @@ public class client extends javax.swing.JFrame {
         this.txt_entrada.setText("");
         this.txt_salida.setText("");
         this.txt_precio.setText("");
-        
+
     }//GEN-LAST:event_btn_ReservarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        javax.swing.JOptionPane.showMessageDialog(this, "Su tramite se cancelo \n", "Alto !!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+
+        this.txt_clave.setText("");
+        this.txt_lugar.setText("");
+        this.txt_locker.setText("");
+        this.txt_empleado.setText("");
+        this.txt_entrada.setText("");
+        this.txt_salida.setText("");
+        this.txt_precio.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+
+        INICIOLOCKERS frm = new INICIOLOCKERS();
+        frm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

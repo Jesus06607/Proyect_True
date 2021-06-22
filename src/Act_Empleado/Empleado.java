@@ -8,6 +8,7 @@ package Act_Empleado;
 
 import Administrador.Principal;
 import Act_Empleado.U_principal;
+import Administrador.Mod_Locker;
 import iniciolockers.INICIOLOCKERS;
 import iniciolockers.LOCKERS;
 import iniciolockers.LUGARES;
@@ -135,6 +136,11 @@ public class Empleado extends javax.swing.JFrame {
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("Cobrar");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem7);
 
         jMenuItem8.setText("Seguridad Locker");
@@ -200,8 +206,18 @@ public class Empleado extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+
+        Mod_Locker frm= new Mod_Locker();
+        frm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+
+        Cobros frm= new Cobros();
+        frm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments
