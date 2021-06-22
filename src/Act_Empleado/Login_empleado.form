@@ -97,7 +97,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_usuario">
+    <Component class="javax.swing.JTextField" name="txt_usuario">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
@@ -108,9 +108,9 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="clave">
+    <Component class="javax.swing.JPasswordField" name="txt_clave">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="claveActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_claveActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

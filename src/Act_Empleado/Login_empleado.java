@@ -6,15 +6,23 @@
 package Act_Empleado;
 
 import Act_Empleado.Empleado;
+import SQL.Conexion;
+import SQL.Controllers;
+import com.mysql.cj.protocol.Resultset;
 import iniciolockers.INICIOLOCKERS;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-
+ 
 /**
  *
  * @author martin
  */
 public class Login_empleado extends javax.swing.JFrame {
+     private static Conexion conn = new Conexion();
+    private static Connection conection = (Connection) conn.conexion();
 
     /**
      * Creates new form Login_empleado
@@ -39,8 +47,8 @@ public class Login_empleado extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        text_usuario = new javax.swing.JTextField();
-        clave = new javax.swing.JPasswordField();
+        txt_usuario = new javax.swing.JTextField();
+        txt_clave = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -74,18 +82,18 @@ public class Login_empleado extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(60, 250, 100, 33);
 
-        text_usuario.setToolTipText("");
-        text_usuario.setName(""); // NOI18N
-        getContentPane().add(text_usuario);
-        text_usuario.setBounds(160, 200, 190, 30);
+        txt_usuario.setToolTipText("");
+        txt_usuario.setName(""); // NOI18N
+        getContentPane().add(txt_usuario);
+        txt_usuario.setBounds(160, 200, 190, 30);
 
-        clave.addActionListener(new java.awt.event.ActionListener() {
+        txt_clave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                claveActionPerformed(evt);
+                txt_claveActionPerformed(evt);
             }
         });
-        getContentPane().add(clave);
-        clave.setBounds(160, 250, 190, 30);
+        getContentPane().add(txt_clave);
+        txt_clave.setBounds(160, 250, 190, 30);
 
         jButton2.setText("Regresar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -112,9 +120,47 @@ public class Login_empleado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void claveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_claveActionPerformed
+    private void validar(){
+        int resultado =0;
+        
+        try {
+         
+            String usuario=txt_usuario.getText();
+            String pass=String.valueOf(txt_clave.getPassword());
+            
+            ResultSet rs1 = Controllers.mostrardatos(" Usuarios ", " Nombre,  Contraseña  ", "Nombre= '"+usuario+"' and Contraseña = '"+pass+"'" );
+            
+
+            //String sql="SELECT *FROM Usuarios WHERE Nombre='"+usuario+"' and Contraseña='"+pass+"'";
+            
+            
+            
+            if(rs1.next()){
+                
+                resultado=1;
+                
+                if(resultado==1){
+                    
+                    Empleado form=new Empleado();
+                    form.setVisible(true);
+                    this.dispose();
+                }else{
+                    
+                    JOptionPane.showMessageDialog(null,"Error en el acceso");
+                    
+                }
+                
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Error en el acceso, vuelva a intentarlo" + e.getMessage());
+        
+        }
+    }
+    
+    
+    private void txt_claveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_claveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_claveActionPerformed
+    }//GEN-LAST:event_txt_claveActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         INICIOLOCKERS frm= new INICIOLOCKERS();
@@ -123,13 +169,16 @@ public class Login_empleado extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        validar();
+        
+        
+        /*
         String [] Usuarios={"Empleado"};
         String [] Claves=new String[2];
         Claves[0]="1234";
 
-        String usuario=text_usuario.getText();
-        String password=clave.getText();
+        String usuario=txt_usuario.getText();
+        String password=txt_clave.getText();
         boolean mensaje=false;
         for(int i = 0; i< Usuarios.length; i++){
             if(Usuarios[i].equals(usuario)&&Claves[i].equals(password)){
@@ -145,10 +194,10 @@ public class Login_empleado extends javax.swing.JFrame {
         }
         else {
             JOptionPane.showMessageDialog(null, "intente otra vez");
-            text_usuario.setText("");
-            clave.setText("");
+            txt_usuario.setText("");
+            txt_clave.setText("");
         }
-
+*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -187,7 +236,6 @@ public class Login_empleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField clave;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -195,6 +243,7 @@ public class Login_empleado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField text_usuario;
+    private javax.swing.JPasswordField txt_clave;
+    private javax.swing.JTextField txt_usuario;
     // End of variables declaration//GEN-END:variables
 }
