@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author Araceli
+ * @author FZVercetti
  */
 public class TURISTAS extends javax.swing.JFrame {
 

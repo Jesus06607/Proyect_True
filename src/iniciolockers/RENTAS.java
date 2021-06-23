@@ -10,7 +10,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author Araceli
+ * @author Fzvercetti
  */
 public class RENTAS extends javax.swing.JFrame {
 
