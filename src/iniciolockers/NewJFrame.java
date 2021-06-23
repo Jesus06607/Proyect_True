@@ -244,7 +244,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_contraActionPerformed
 
     private void txt_statusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_statusActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
     }//GEN-LAST:event_txt_statusActionPerformed
 
     private void txt_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telefonoActionPerformed
