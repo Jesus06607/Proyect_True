@@ -21,7 +21,7 @@ public class Conexion {
     public Connection conexion(){
         try{//se intenta la conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conect = DriverManager.getConnection("jdbc:mysql://localhost/Lockers", "Admin", "Guitar_Mar23");
+            conect = DriverManager.getConnection("jdbc:mysql://localhost/Lockers", "root", "");
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, e);

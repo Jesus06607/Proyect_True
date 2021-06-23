@@ -80,6 +80,7 @@ public class data_table extends javax.swing.JFrame {
         lbfondo_data = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(966, 380));
         getContentPane().setLayout(null);
 
         table_date.setModel(new javax.swing.table.DefaultTableModel(
@@ -95,12 +96,12 @@ public class data_table extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 60, 947, 213);
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Usuario");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(371, 0, 159, 60);
+        jLabel1.setBounds(420, 0, 159, 60);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -109,11 +110,11 @@ public class data_table extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(480, 290, 120, 40);
+        jButton1.setBounds(440, 290, 120, 40);
 
         lbfondo_data.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_data_table.jpg"))); // NOI18N
         getContentPane().add(lbfondo_data);
-        lbfondo_data.setBounds(0, 0, 970, 340);
+        lbfondo_data.setBounds(0, 0, 970, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

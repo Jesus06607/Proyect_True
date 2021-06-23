@@ -80,7 +80,7 @@ public class Table_Lugares extends javax.swing.JFrame {
         lbfondo_tablelugares = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1000, 400));
+        setMinimumSize(new java.awt.Dimension(960, 420));
         getContentPane().setLayout(null);
 
         table_lugares.setModel(new javax.swing.table.DefaultTableModel(
@@ -114,7 +114,7 @@ public class Table_Lugares extends javax.swing.JFrame {
 
         lbfondo_tablelugares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_table_lugares.jpg"))); // NOI18N
         getContentPane().add(lbfondo_tablelugares);
-        lbfondo_tablelugares.setBounds(0, 0, 960, 400);
+        lbfondo_tablelugares.setBounds(0, 0, 980, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

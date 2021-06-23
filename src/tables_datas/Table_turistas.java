@@ -82,7 +82,7 @@ public class Table_turistas extends javax.swing.JFrame {
         lbfondo_turistas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(600, 400));
+        setMinimumSize(new java.awt.Dimension(966, 400));
         getContentPane().setLayout(null);
 
         table_turista.setModel(new javax.swing.table.DefaultTableModel(
@@ -96,12 +96,14 @@ public class Table_turistas extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table_turista);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 50, 985, 240);
+        jScrollPane1.setBounds(10, 50, 940, 240);
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Turistas");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(390, 0, 190, 40);
+        jLabel1.setBounds(390, 0, 150, 50);
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -110,11 +112,11 @@ public class Table_turistas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 300, 120, 40);
+        jButton1.setBounds(410, 310, 120, 40);
 
         lbfondo_turistas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_table_turistas.jpg"))); // NOI18N
         getContentPane().add(lbfondo_turistas);
-        lbfondo_turistas.setBounds(20, 0, 960, 360);
+        lbfondo_turistas.setBounds(0, 0, 990, 370);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -70,7 +70,7 @@ public class table_catalogo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(400, 400));
+        setMinimumSize(new java.awt.Dimension(500, 410));
         getContentPane().setLayout(null);
 
         table_catalogo.setModel(new javax.swing.table.DefaultTableModel(
@@ -104,7 +104,7 @@ public class table_catalogo extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_data_table.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 510, 400);
+        jLabel2.setBounds(0, 0, 520, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

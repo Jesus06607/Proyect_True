@@ -109,12 +109,14 @@ public class client extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Fecha de entrada:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(340, 100, 140, 30);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Fecha de salida:");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(350, 140, 130, 30);
@@ -139,6 +141,7 @@ public class client extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Precio de locker: ");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(350, 180, 130, 30);
@@ -170,12 +173,16 @@ public class client extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(660, 190, 100, 30);
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Reservaciones de lockers");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(260, 10, 250, 40);
 
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Realize su reservacion:");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(20, 60, 240, 30);
