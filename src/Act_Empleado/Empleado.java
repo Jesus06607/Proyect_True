@@ -81,7 +81,7 @@ public class Empleado extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_menuempleado.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 410, 410);
+        jLabel2.setBounds(0, 0, 420, 410);
 
         jMenu1.setText("Agregar");
 

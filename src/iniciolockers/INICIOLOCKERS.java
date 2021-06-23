@@ -7,6 +7,7 @@ package iniciolockers;
 
 import Act_Empleado.Login_empleado;
 import Users.Register_users;
+import Users.client;
 import javax.swing.ImageIcon;
 
 /**
@@ -24,6 +25,7 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
         this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -155,6 +157,9 @@ public class INICIOLOCKERS extends javax.swing.JFrame {
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
+        client frm = new client();
+        frm.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed

@@ -28,6 +28,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
            this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**

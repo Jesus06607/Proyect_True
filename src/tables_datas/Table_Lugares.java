@@ -29,6 +29,7 @@ public class Table_Lugares extends javax.swing.JFrame {
    this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
            DefaultTableModel modelo= new DefaultTableModel();
        
         modelo.addColumn("Clave");

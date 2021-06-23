@@ -23,6 +23,7 @@ public class LUGARES extends javax.swing.JFrame {
         this.setTitle("Sistema de Lockers de Ciudad Valles");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**

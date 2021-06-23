@@ -20,9 +20,10 @@ public class LOGIN extends javax.swing.JFrame {
      */
     public LOGIN() {
         initComponents();
-           this.setTitle("Sa.H.Lo");
+        this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
