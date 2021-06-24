@@ -134,7 +134,7 @@ public class Cobros extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Fecha de entrada:");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(40, 180, 140, 30);
+        jLabel11.setBounds(30, 180, 150, 30);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cobros"));
         jPanel1.setLayout(null);
@@ -181,7 +181,7 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(20, 190, 80, 27);
+        jButton2.setBounds(20, 190, 80, 25);
 
         txt_Total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,12 +215,12 @@ public class Cobros extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(110, 190, 90, 27);
+        jButton4.setBounds(110, 190, 90, 25);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(460, 180, 260, 220);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel2.setLayout(null);
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));

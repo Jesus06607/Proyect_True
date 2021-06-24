@@ -118,7 +118,7 @@ public class Mod_Locker extends javax.swing.JFrame {
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Fecha de Adquisicion");
+        jLabel7.setText("Fecha de Adquisición");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(30, 340, 180, 20);
 

@@ -73,7 +73,7 @@ public class LUGARES extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Direccion");
+        jLabel3.setText("Dirección");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(100, 170, 80, 30);
 
@@ -87,7 +87,7 @@ public class LUGARES extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Telefono");
+        jLabel5.setText("Teléfono");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(100, 250, 80, 30);
 

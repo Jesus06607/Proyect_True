@@ -104,9 +104,9 @@ public class Mod_Users extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Telefono");
+        jLabel5.setText("Teléfono");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(60, 240, 90, 30);
+        jLabel5.setBounds(70, 240, 70, 30);
 
         txt_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

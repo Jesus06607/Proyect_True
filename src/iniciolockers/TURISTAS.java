@@ -82,7 +82,7 @@ public class TURISTAS extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Telefono");
+        jLabel4.setText("Teléfono");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(87, 180, 90, 30);
 

@@ -109,7 +109,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Telefono");
+        jLabel5.setText("Teléfono");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(80, 240, 70, 30);
 

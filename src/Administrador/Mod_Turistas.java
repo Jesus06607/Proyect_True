@@ -92,7 +92,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Telefono");
+        jLabel4.setText("Teléfono");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(80, 180, 63, 30);
 
@@ -101,7 +101,7 @@ public class Mod_Turistas extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Dirección");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 230, 67, 30);
+        jLabel5.setBounds(80, 230, 67, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
