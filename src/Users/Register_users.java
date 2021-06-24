@@ -163,7 +163,7 @@ public class Register_users extends javax.swing.JFrame {
         getContentPane().add(CB_edad);
         CB_edad.setBounds(180, 380, 60, 30);
 
-        CB_sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino", "Otro", " ", " " }));
+        CB_sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Otro", " ", " " }));
         getContentPane().add(CB_sexo);
         CB_sexo.setBounds(180, 330, 90, 30);
 

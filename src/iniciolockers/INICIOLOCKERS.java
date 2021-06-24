@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author Fzvercetti
+ * @author FZVercetti
  */
 public class INICIOLOCKERS extends javax.swing.JFrame {
 

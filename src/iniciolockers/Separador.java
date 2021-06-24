@@ -10,7 +10,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author martin
+ * @author FZVercetti
  */
 public class Separador extends javax.swing.JFrame {
 
