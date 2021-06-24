@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author under305
+ * @author FZVercetti
  */
 public class NewJFrame extends javax.swing.JFrame {
    
