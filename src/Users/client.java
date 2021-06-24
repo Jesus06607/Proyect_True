@@ -81,6 +81,8 @@ public class client extends javax.swing.JFrame {
         txt_clave = new javax.swing.JTextField();
         txt_lugar = new javax.swing.JTextField();
         txt_locker = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         lbfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -120,7 +122,7 @@ public class client extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Fecha de salida:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(350, 140, 130, 30);
+        jLabel5.setBounds(350, 180, 130, 30);
 
         btn_Reservar.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         btn_Reservar.setText("Reservar");
@@ -136,16 +138,16 @@ public class client extends javax.swing.JFrame {
         getContentPane().add(txt_entrada);
         txt_entrada.setBounds(480, 100, 110, 30);
         getContentPane().add(txt_salida);
-        txt_salida.setBounds(480, 140, 110, 30);
+        txt_salida.setBounds(480, 180, 110, 30);
         getContentPane().add(txt_precio);
-        txt_precio.setBounds(480, 180, 110, 30);
+        txt_precio.setBounds(480, 220, 110, 30);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Precio de locker: ");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(350, 180, 130, 30);
+        jLabel6.setBounds(350, 220, 130, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -184,7 +186,7 @@ public class client extends javax.swing.JFrame {
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Realize su reservacion:");
+        jLabel9.setText("Realice su reservación:");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(20, 60, 240, 30);
 
@@ -232,7 +234,7 @@ public class client extends javax.swing.JFrame {
             }
         });
         getContentPane().add(TG1);
-        TG1.setBounds(340, 250, 240, 40);
+        TG1.setBounds(350, 260, 240, 40);
 
         tb3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -259,6 +261,13 @@ public class client extends javax.swing.JFrame {
         txt_lugar.setBounds(200, 140, 130, 30);
         getContentPane().add(txt_locker);
         txt_locker.setBounds(200, 180, 130, 30);
+
+        jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel10.setText("Hora de entrada:");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(340, 140, 140, 30);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(480, 140, 110, 30);
 
         lbfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_client.jpg"))); // NOI18N
         getContentPane().add(lbfondo);
@@ -459,6 +468,7 @@ public class client extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -470,6 +480,7 @@ public class client extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbfondo;
     private javax.swing.JTable tb1;
     private javax.swing.JTable tb2;

@@ -50,11 +50,11 @@ public class Register_users extends javax.swing.JFrame {
         txt_nombre = new javax.swing.JTextField();
         txt_telefono = new javax.swing.JTextField();
         txt_direccion = new javax.swing.JTextField();
-        txt_edad = new javax.swing.JTextField();
         txt_nacion = new javax.swing.JTextField();
-        txt_sexo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        CB_edad = new javax.swing.JComboBox<>();
+        CB_sexo = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -101,21 +101,21 @@ public class Register_users extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Edad");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(110, 280, 40, 30);
+        jLabel6.setBounds(120, 380, 40, 30);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Nacionalidad");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 330, 100, 30);
+        jLabel7.setBounds(60, 280, 100, 30);
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Sexo");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(120, 380, 34, 30);
+        jLabel8.setBounds(120, 330, 34, 30);
 
         txt_clave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,8 +130,6 @@ public class Register_users extends javax.swing.JFrame {
         txt_telefono.setBounds(180, 180, 290, 30);
         getContentPane().add(txt_direccion);
         txt_direccion.setBounds(180, 230, 290, 30);
-        getContentPane().add(txt_edad);
-        txt_edad.setBounds(180, 280, 290, 30);
 
         txt_nacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,9 +137,7 @@ public class Register_users extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txt_nacion);
-        txt_nacion.setBounds(180, 330, 290, 30);
-        getContentPane().add(txt_sexo);
-        txt_sexo.setBounds(180, 380, 290, 30);
+        txt_nacion.setBounds(180, 280, 290, 30);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/Guardar.png"))); // NOI18N
         jButton1.setText("Guardar");
@@ -163,9 +159,17 @@ public class Register_users extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(560, 430, 110, 40);
 
+        CB_edad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70" }));
+        getContentPane().add(CB_edad);
+        CB_edad.setBounds(180, 380, 60, 30);
+
+        CB_sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino", "Otro", " ", " " }));
+        getContentPane().add(CB_sexo);
+        CB_sexo.setBounds(180, 330, 90, 30);
+
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_registrer_users.jpg"))); // NOI18N
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(0, 0, 830, 520);
+        jLabel9.setBounds(0, -10, 810, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -181,17 +185,18 @@ public class Register_users extends javax.swing.JFrame {
         cadena2 = txt_nombre.getText();
         cadena3 = txt_telefono.getText();
         cadena4 = txt_direccion.getText();
-        cadena5 = txt_edad.getText();
+        cadena5 = CB_edad.getSelectedItem().toString();
         cadena6 = txt_nacion.getText();
-        cadena7 = txt_sexo.getText();
+        cadena7 = CB_sexo.getSelectedItem().toString();
+ 
 
         if (txt_clave.getText().equals("")
             || (txt_nombre.getText().equals("")
                 || (txt_telefono.getText().equals(""))
                 || (txt_direccion.getText().equals(""))
-                || (txt_edad.getText().equals(""))
+                || (CB_edad.getSelectedItem().toString().equals(""))
                 || (txt_nacion.getText().equals(""))
-                || (txt_sexo.getText().equals("")))) {
+                || (CB_sexo.getSelectedItem().toString().equals("")))) {
             javax.swing.JOptionPane.showMessageDialog(this, "Debe llenar todos los campos \n", "AVISO!", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             txt_nombre.requestFocus();
         } else if (Controllers.addData(" Turistas ", " clave, Nombre, Telefono, Direccion, Edad, Nacionalidad, Sexo ", " '" + cadena1 + "', '" + cadena2 + "', '" + cadena3 + "', '" + cadena4 + "', '" + cadena5 + "', '" + cadena6 + "', '" + cadena7 + "' ")) {
@@ -202,9 +207,9 @@ public class Register_users extends javax.swing.JFrame {
         this.txt_nombre.setText("");
         this.txt_telefono.setText("");
         this.txt_direccion.setText("");
-        this.txt_edad.setText("");
+        this.CB_edad.setSelectedItem("");
         this.txt_nacion.setText("");
-        this.txt_sexo.setText("");
+        this.CB_sexo.setSelectedItem("");
         
         
         client frm= new client();
@@ -258,6 +263,8 @@ public class Register_users extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CB_edad;
+    private javax.swing.JComboBox<String> CB_sexo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -271,10 +278,8 @@ public class Register_users extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txt_clave;
     private javax.swing.JTextField txt_direccion;
-    private javax.swing.JTextField txt_edad;
     private javax.swing.JTextField txt_nacion;
     private javax.swing.JTextField txt_nombre;
-    private javax.swing.JTextField txt_sexo;
     private javax.swing.JTextField txt_telefono;
     // End of variables declaration//GEN-END:variables
 }

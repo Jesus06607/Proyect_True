@@ -21,7 +21,7 @@ public class LOCKERS extends javax.swing.JFrame {
      */
     public LOCKERS() {
         initComponents();
-         this.setTitle("Sa.H.Lo");
+        this.setTitle("Sa.H.Lo");
         this.setIconImage(new ImageIcon(getClass().getResource("/IMAGENES/icono.png")).getImage());
         this.setResizable(false);
         this.setLocationRelativeTo(null);
@@ -184,7 +184,7 @@ public class LOCKERS extends javax.swing.JFrame {
         getContentPane().add(btnContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/fondo_lokers.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 460));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
